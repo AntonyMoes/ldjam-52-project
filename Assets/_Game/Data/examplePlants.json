@@ -2,10 +2,19 @@
   "records": [
     {
       "name": "potat",
+      "sprite": "potat",
       "displayName": "LE POTAT",
       "requirements": "310",
+      "range" : " ,x, \nx,o,x",
+      "effect": "-102"
+    },
+    {
+      "name": "tomat",
+      "sprite": "tomat",
+      "displayName": "TOMATO",
+      "requirements": "111",
       "range" : " , , \nx,o,x",
-      "effect": "-30-2"
+      "effect": "120"
     }
   ]
 }
