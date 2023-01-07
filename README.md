@@ -1,2 +1,2 @@
-# template-project
-template unity project
+# ldjam-52-project
+Soily matters
