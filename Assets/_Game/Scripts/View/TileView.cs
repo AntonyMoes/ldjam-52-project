@@ -15,8 +15,16 @@ namespace _Game.Scripts.View {
             Position = position;
         }
 
-        public bool TryPlant(Plant plant) {
+        public bool CanPlant(Plant plant) {
+            return _field.CanPlantAt(plant, Position);
+        }
+
+        public bool PlantAt(Plant plant) {
             return _field.PlantAt(plant, Position);
+        }
+
+        public void ShowResources(Dictionary<Resource,int> update = null) {
+            // TODO
         }
     }
 }

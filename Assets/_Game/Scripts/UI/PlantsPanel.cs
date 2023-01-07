@@ -18,11 +18,12 @@ namespace _Game.Scripts.UI {
         [SerializeField] private DraggedPlant _draggedPlantPrefab;
 
         private readonly List<PlantItem> _plantItems = new List<PlantItem>();
-        private Action _onTargetPlanted;
+        private Action<Plant, DragComponent> _onDrag;
+        private Action<Plant, DragComponent, DropComponent> _onDrop;
 
         private Action _stopDrag;
 
-        public void Load(Dictionary<Plant, int> plants, Plant targetPlant, Action onTargetPlanted) {
+        public void Load(Dictionary<Plant, int> plants, Plant targetPlant, Action<Plant, DragComponent> onDrag, Action<Plant, DragComponent, DropComponent> onDrop) {
             foreach (var (plant, count) in plants) {
                 var plantItem = Instantiate(_plantItemPrefab, _plantItemsRoot);
                 plantItem.Load(plant, count, OnStartDrag, OnStopDrag);
@@ -30,13 +31,17 @@ namespace _Game.Scripts.UI {
             }
 
             _targetPlantItem.Load(targetPlant, 1, OnStartDrag, OnStopDrag);
-            _onTargetPlanted = onTargetPlanted;
+
+            _onDrag = onDrag;
+            _onDrop = onDrop;
         }
 
         private void OnStartDrag(Plant plant, PointerEventData eventData) {
             var draggedPlant = Instantiate(_draggedPlantPrefab);
+            _onDrag?.Invoke(plant, draggedPlant.DragComponent);
+
             var drag = new Drag(() => DragComponent.MouseWorldPoint, out _stopDrag);
-            draggedPlant.Load(plant, drag, OnDrop);
+            draggedPlant.Load(plant, drag, _onDrop);
         }
 
         private void OnStopDrag() {
@@ -44,26 +49,12 @@ namespace _Game.Scripts.UI {
             _stopDrag = null;
         }
 
-        private void OnDrop(Plant plant, DragComponent dragComponent, DropComponent dropComponent) {
-            Destroy(dragComponent.gameObject);
-            if (dropComponent == null || !dropComponent.TryGetComponent<TileView>(out var tileView)) {
-                Debug.LogWarning("NOWHERE TO PLANT");
-                return;
-            }
-
-            if (tileView.TryPlant(plant)) {
-                Debug.LogWarning($"PLANTED AT {tileView.Position}");
-                var item = _plantItems.FirstOrDefault(item => item.Plant == plant);
-                if (item != null) {
-                    if (--item.Count == 0) {
-                        Destroy(item.gameObject);
-                    }
-                } else if (_targetPlantItem.Plant == plant) {
-                    // TODO WIN
-                    _onTargetPlanted?.Invoke();
+        public void OnPlanted(Plant plant) {
+            var item = _plantItems.FirstOrDefault(item => item.Plant == plant);
+            if (item != null) {
+                if (--item.Count == 0) {
+                    Destroy(item.gameObject);
                 }
-            } else {
-                Debug.LogWarning($"COULD NOT PLANT AT {tileView.Position}! Requirements: {plant.Requirements.Serialize()}; Resources: {tileView.Resources.Serialize()}");
             }
         }
 

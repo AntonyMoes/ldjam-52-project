@@ -4,14 +4,22 @@ using UnityEngine;
 
 namespace _Game.Scripts {
     public class App : MonoBehaviour {
+        private LevelRunner _currentRunner;
+
         private void Start() {
             DataStorage.Instance.Init();
             // TODO
-            new LevelRunner().StartLevel(DataStorage.Instance.Levels[0], OnWin);
+            _currentRunner = new LevelRunner();
+            _currentRunner.StartLevel(DataStorage.Instance.Levels[0], OnWin);
         }
 
         private void OnWin() {
+            // TODO
             Debug.LogError("WIIIIIN!");
+        }
+
+        private void Update() {
+            _currentRunner?.ProcessFrame(Time.deltaTime);
         }
     }
 }

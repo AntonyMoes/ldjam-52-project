@@ -7,7 +7,7 @@ namespace _Game.Scripts.View {
     public class DraggedPlant : MonoBehaviour {
         [SerializeField] private SpriteRenderer _plant;
         [SerializeField] private DragComponent _dragComponent;
-        // public DragComponent DragComponent => _dragComponent;
+        public DragComponent DragComponent => _dragComponent;
 
         public void Load(Plant plant, Drag drag, Action<Plant, DragComponent, DropComponent> onDrop) {
             _plant.sprite = plant.Sprite;

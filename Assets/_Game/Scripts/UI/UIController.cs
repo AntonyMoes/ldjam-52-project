@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using _Game.Scripts.DragAndDrop;
 using _Game.Scripts.Model;
 using GeneralUtils;
 using GeneralUtils.UI;
@@ -11,8 +12,8 @@ namespace _Game.Scripts.UI {
         [SerializeField] private Transform _hider;
         [SerializeField] private Transform _windows;
 
-        public PlantsPanel ShowPlantsPanel(Dictionary<Plant, int> plants, Plant targetPlant, Action onTargetPlanted) {
-            _plantsPanel.Load(plants, targetPlant, onTargetPlanted);
+        public PlantsPanel ShowPlantsPanel(Dictionary<Plant, int> plants, Plant targetPlant, Action<Plant, DragComponent> onDrag, Action<Plant, DragComponent, DropComponent> onDrop) {
+            _plantsPanel.Load(plants, targetPlant, onDrag, onDrop);
             _plantsPanel.Show();
             return _plantsPanel;
         }
