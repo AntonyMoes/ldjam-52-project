@@ -1,0 +1,72 @@
+{
+  "records": [
+    {
+      "name": "lvl1",
+      "field": "111,111\\n111,111",
+      "targetPlant": "tomat",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 1
+        },
+        {
+          "name": "tomat",
+          "count" : 1
+        }
+      ]
+    },
+    {
+      "name": "lvl2",
+      "field": "111,111,111\\n111,111,111\\n111,111,111",
+      "targetPlant": "potat",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 3
+        },
+        {
+          "name": "potat",
+          "count" : 1
+        }
+      ]
+    },
+    {
+      "name": "lvl3",
+      "field": "111,111,111\\n111,111,111\\n111,111,111",
+      "targetPlant": "pumpkin",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 2
+        },
+        {
+          "name": "landysh",
+          "count" : 1
+        },
+        {
+          "name": "pumpkin",
+          "count" : 1
+        }
+      ]
+    },
+    {
+      "name": "lvl4",
+      "field": "111,111,111\\n111,111,111\\n111,111,111",
+      "targetPlant": "yggdrasil",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 2
+        },
+        {
+          "name": "landysh",
+          "count" : 2
+        },
+        {
+          "name": "yggdrasil",
+          "count" : 1
+        }
+      ]
+    }
+  ]
+}

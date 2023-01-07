@@ -1,0 +1,52 @@
+{
+  "records": [
+    {
+      "name": "rose",
+      "sprite": "rose",
+      "displayName": "La Rose",
+      "requirements": "111",
+      "range" : " ,x, \nx,o,x\n ,x, ",
+      "effect": "100"
+    },
+    {
+      "name": "landysh",
+      "sprite": "landysh",
+      "displayName": "La Landysh",
+      "requirements": "311",
+      "range" : "x,x\nx, \no, ",
+      "effect": "010"
+    },
+    {
+      "name": "tomat",
+      "sprite": "tomat",
+      "displayName": "TOMATO",
+      "requirements": "211",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "potat",
+      "sprite": "potat",
+      "displayName": "LE POTAT",
+      "requirements": "400",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "pumpkin",
+      "sprite": "pumpkin",
+      "displayName": "LE pumpkin",
+      "requirements": "121",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "yggdrasil",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
+      "requirements": "131",
+      "range" : "o",
+      "effect": "000"
+    }
+  ]
+}
