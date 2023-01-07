@@ -1,0 +1,11 @@
+{
+  "records": [
+    {
+      "name": "potat",
+      "displayName": "LE POTAT",
+      "requirements": "310",
+      "range" : " , , \nx,o,x",
+      "effect": "-30-2"
+    }
+  ]
+}
