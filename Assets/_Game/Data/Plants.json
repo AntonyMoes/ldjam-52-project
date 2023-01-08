@@ -50,32 +50,32 @@
     },
     {
       "name": "lv1final",
-      "sprite": "tomat",
-      "displayName": "LA TOMATO",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "211",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv2final",
-      "sprite": "potat",
-      "displayName": "LE POTAT",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "400",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv3final",
-      "sprite": "pumpkin",
-      "displayName": "LE pumpkin",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "121",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv4final",
-      "sprite": "kabachok",
-      "displayName": "The Kabachok",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "131",
       "range" : "o",
       "effect": "000"
@@ -90,64 +90,64 @@
     },
     {
       "name": "lv6final",
-      "sprite": "Palm",
-      "displayName": "The Palm",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "340",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv7final",
-      "sprite": "TEST",
-      "displayName": "The TEST",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "242",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv8final",
-      "sprite": "TEST",
-      "displayName": "The TEST",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "400",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv9final",
-      "sprite": "TEST",
-      "displayName": "The TEST",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "414",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv10final",
-      "sprite": "TEST",
-      "displayName": "The TEST",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "333",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv12final",
-      "sprite": "TEST",
-      "displayName": "The TEST",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "404",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv11final",
-      "sprite": "TEST",
-      "displayName": "The TEST",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "424",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lvXfinal",
-      "sprite": "TEST",
-      "displayName": "The TEST",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "000",
       "range" : "o",
       "effect": "000"
