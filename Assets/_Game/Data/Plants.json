@@ -153,6 +153,22 @@
       "effect": "000"
     },
     {
+      "name": "lv14final",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
+      "requirements": "044",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "lv15final",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
+      "requirements": "000",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
       "name": "lvXfinal",
       "sprite": "yggdrasil",
       "displayName": "YGGDRASIL",
