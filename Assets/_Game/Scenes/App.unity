@@ -821,7 +821,7 @@ MonoBehaviour:
   - resource: 0
     color: {r: 1, g: 0.39607844, b: 0.39607844, a: 1}
   - resource: 1
-    color: {r: 1, g: 0.9647059, b: 0.41960785, a: 1}
+    color: {r: 1, g: 0.87058824, b: 0, a: 1}
   - resource: 2
     color: {r: 0.33333334, g: 0.8039216, b: 1, a: 1}
   _borderColors:
