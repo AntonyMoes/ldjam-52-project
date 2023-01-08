@@ -51,8 +51,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 2105017542276601953}
-  _affectedSprite: {fileID: 21300000, guid: 003c4d6be9160fb45a1a9e0f212f6978, type: 3}
-  _plantSprite: {fileID: 21300000, guid: ff391f45c4a47e446be79f0c9e4696dd, type: 3}
+  _affectedSprite: {fileID: 21300000, guid: 006d19711c3110d45a8ea4472824238b, type: 3}
+  _plantSprite: {fileID: 21300000, guid: 51b6aec311630ea41858dad2445e3069, type: 3}
 --- !u!222 &2105017542276601966
 CanvasRenderer:
   m_ObjectHideFlags: 0

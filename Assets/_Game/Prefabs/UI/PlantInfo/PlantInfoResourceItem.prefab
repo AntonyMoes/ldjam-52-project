@@ -89,6 +89,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 560592694711930409}
-  _sprite: {fileID: 21300000, guid: ff93b01992754514f80eb282b3f92908, type: 3}
-  _addSprite: {fileID: 21300000, guid: 347d0f5ecbcb5e7408fc8e36ec62ea05, type: 3}
-  _removeSprite: {fileID: 21300000, guid: f0ad9125403166541803307426279d26, type: 3}
+  _sprite: {fileID: 8609846521960839533, guid: b7500e63230bd1649810a321846e6903, type: 3}
+  _addSprite: {fileID: 6113275048241899536, guid: b7500e63230bd1649810a321846e6903, type: 3}
+  _removeSprite: {fileID: 2256621475940152565, guid: b7500e63230bd1649810a321846e6903, type: 3}

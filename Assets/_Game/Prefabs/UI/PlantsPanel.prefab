@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -220}
+  m_AnchoredPosition: {x: 0, y: -230}
   m_SizeDelta: {x: 200, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &3301108151288878101
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 2
-  m_Spacing: 0
+  m_Spacing: 4
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -93,7 +93,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3301108152294792448
 RectTransform:
   m_ObjectHideFlags: 0
@@ -138,17 +138,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3301108152294792448}
     m_Modifications:
+    - target: {fileID: 6442026826205941353, guid: 863beb08d584acb418db89b5cdb5feb4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442026826205941353, guid: 863beb08d584acb418db89b5cdb5feb4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.43529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442026826205941353, guid: 863beb08d584acb418db89b5cdb5feb4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.38039216
+      objectReference: {fileID: 0}
     - target: {fileID: 7874630311506263532, guid: 863beb08d584acb418db89b5cdb5feb4, type: 3}
       propertyPath: m_Color.b
-      value: 0.4732289
+      value: 0.48235294
       objectReference: {fileID: 0}
     - target: {fileID: 7874630311506263532, guid: 863beb08d584acb418db89b5cdb5feb4, type: 3}
       propertyPath: m_Color.g
-      value: 0.5709146
+      value: 0.15686275
       objectReference: {fileID: 0}
     - target: {fileID: 7874630311506263532, guid: 863beb08d584acb418db89b5cdb5feb4, type: 3}
       propertyPath: m_Color.r
-      value: 0.5943396
+      value: 0.59607846
       objectReference: {fileID: 0}
     - target: {fileID: 7874630311506263534, guid: 863beb08d584acb418db89b5cdb5feb4, type: 3}
       propertyPath: m_Name
