@@ -1,6 +1,12 @@
 {
   "records": [
     {
+      "name": "lvl0",
+      "field": "111",
+      "targetPlant": "lv15final",
+      "availablePlants": []
+    },
+    {
       "name": "lvl1",
       "field": "111,111\\n111,111",
       "targetPlant": "lv1final",
@@ -177,6 +183,44 @@
         {
           "name": "violet",
           "count" : 5
+        }
+      ]
+    },
+    {
+      "name": "lvl13",
+      "field": "021,010,112\\n111,030,201\\n111,000,101",
+      "targetPlant": "lv13final",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 4
+        },
+        {
+          "name": "violet",
+          "count" : 1
+        },
+        {
+          "name": "tulip",
+          "count" : 2
+        }
+      ]
+    },
+    {
+      "name": "lvl14",
+      "field": "001,041,001,041,001\\n041,001,001,041,001\\n001,001,042,001,001\\n041,001,001,001,041\\n001,001,001,001,001",
+      "targetPlant": "lv14final",
+      "availablePlants": [
+        {
+          "name": "sunflower",
+          "count" : 1
+        },
+        {
+          "name": "violet",
+          "count" : 2
+        },
+        {
+          "name": "tulip",
+          "count" : 2
         }
       ]
     }
