@@ -34,8 +34,13 @@ namespace _Game.Scripts.Data {
 
             return Enumerable
                 .Range(0, Resources.Length)
-                .ToDictionary(i => Resources[i],
-                    i => Mathf.Clamp(int.Parse(match.Groups[i + 1].Value), MinResourceValue, MaxResourceValue));
+                .ToDictionary(i => Resources[i], i => ParseAndClamp(match.Groups[i + 1].Value));
+
+            int ParseAndClamp(string stringValue) {
+                var rawValue = int.Parse(stringValue);
+                var sign = Math.Sign(rawValue);
+                return sign * Mathf.Clamp(Math.Abs(rawValue), MinResourceValue, MaxResourceValue);
+            }
         }
 
         public static IDictionary<Resource, int> CombineWith(this IDictionary<Resource, int> resources,
