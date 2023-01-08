@@ -2194,13 +2194,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantInfoPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 8351336810479799177, guid: 693fdcb4190f60a4eb4fba98e96605d5, type: 3}
-      propertyPath: m_StartCorner
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8351336810479799177, guid: 693fdcb4190f60a4eb4fba98e96605d5, type: 3}
-      propertyPath: m_ChildAlignment
-      value: 6
+    - target: {fileID: 8351336808723237763, guid: 693fdcb4190f60a4eb4fba98e96605d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 693fdcb4190f60a4eb4fba98e96605d5, type: 3}

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace _Game.Scripts.UI.FlowerInfo {
-    public class RangeItem : MonoBehaviour {
+namespace _Game.Scripts.UI.PlantInfo {
+    public class PlantInfoRangeItem : MonoBehaviour {
         [SerializeField] private Image _image;
         [SerializeField] private Sprite _affectedSprite;
         [SerializeField] private Sprite _plantSprite;

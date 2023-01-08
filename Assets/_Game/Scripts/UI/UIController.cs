@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using _Game.Scripts.DragAndDrop;
 using _Game.Scripts.Model;
-using _Game.Scripts.UI.FlowerInfo;
+using _Game.Scripts.UI.PlantInfo;
 using GeneralUtils;
 using GeneralUtils.UI;
 using UnityEngine;

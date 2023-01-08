@@ -6,21 +6,25 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _Game.Scripts.UI.FlowerInfo {
+namespace _Game.Scripts.UI.PlantInfo {
     public class PlantInfoPanel : UIElement {
         [SerializeField] private TextMeshProUGUI _plantName;
 
         [SerializeField] private GridLayoutGroup _rangeParent;
-        [SerializeField] private RangeItem _rangeItemPrefab;
-        private readonly List<RangeItem> _rangeItems = new List<RangeItem>();
+        [SerializeField] private PlantInfoRangeItem _plantInfoRangeItemPrefab;
+
+        [SerializeField] private PlantInfoResourceGroup _requiresGroup;
+        [SerializeField] private PlantInfoResourceGroup _affectsGroup;
+
+        private readonly List<PlantInfoRangeItem> _rangeItems = new List<PlantInfoRangeItem>();
 
         public void Load(Plant plant) {
             Clear();
             _plantName.text = plant.Name;
             
             LoadRange(plant.Range);
-            // LoadResourceGroup
-            // LoadResourceGroup
+            _requiresGroup.Load(plant.Requirements, false);
+            _affectsGroup.Load(plant.Effect, true);
         }
 
         private void LoadRange(Vector2Int[] range) {
@@ -54,26 +58,25 @@ namespace _Game.Scripts.UI.FlowerInfo {
             foreach (var position in size.Iterate()) {
                 var rangePosition = position + min;
 
-                RangeItem.State state;
+                PlantInfoRangeItem.State state;
                 if (rangePosition == Vector2Int.zero) {
-                    state = RangeItem.State.Plant;
+                    state = PlantInfoRangeItem.State.Plant;
                 } else if (range.Contains(rangePosition)) {
-                    state = RangeItem.State.Affected;
+                    state = PlantInfoRangeItem.State.Affected;
                 } else {
-                    state = RangeItem.State.Empty;
+                    state = PlantInfoRangeItem.State.Empty;
                 }
 
-                var rangeItem = Instantiate(_rangeItemPrefab,_rangeParent.transform);
+                var rangeItem = Instantiate(_plantInfoRangeItemPrefab,_rangeParent.transform);
                 rangeItem.Load(state);
                 _rangeItems.Add(rangeItem);
             }
         }
 
-        private void LoadResourceGroup() {
-            
-        }
-
         public override void Clear() {
+            _requiresGroup.Clear();
+            _affectsGroup.Clear();
+
             foreach (var rangeItem in _rangeItems) {
                 Destroy(rangeItem.gameObject);
             }

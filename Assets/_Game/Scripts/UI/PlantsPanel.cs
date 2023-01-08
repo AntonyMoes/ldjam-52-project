@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using _Game.Scripts.Data;
 using _Game.Scripts.DragAndDrop;
 using _Game.Scripts.Model;
 using _Game.Scripts.View;
@@ -30,7 +29,7 @@ namespace _Game.Scripts.UI {
                 _plantItems.Add(plantItem);
             }
 
-            _targetPlantItem.Load(targetPlant, 1, OnStartDrag, OnStopDrag);
+            _targetPlantItem.Load(targetPlant, null, OnStartDrag, OnStopDrag);
 
             _onDrag = onDrag;
             _onDrop = onDrop;
@@ -60,7 +59,10 @@ namespace _Game.Scripts.UI {
         }
 
         public override void Clear() {
+            _targetPlantItem.Clear();
+
             foreach (var plantItem in _plantItems) {
+                plantItem.Clear();
                 Destroy(plantItem.gameObject);
             }
 
