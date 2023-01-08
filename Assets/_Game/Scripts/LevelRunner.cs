@@ -25,12 +25,14 @@ namespace _Game.Scripts {
         private DragComponent _dragComponent;
         private TileView _currentTile;
 
-        public void StartLevel(LevelData data, Action onComplete) {
+        public void StartLevel(LevelData data, Action onComplete, Action<Vector2Int> focusOnBoard) {
             _data = data;
             _onComplete = onComplete;
 
             _field = new Field(_data.Field);
             _targetPlant = GetPlantByName(_data.targetPlant);
+
+            focusOnBoard?.Invoke(_field.Size);
 
             Show();
         }
@@ -60,7 +62,7 @@ namespace _Game.Scripts {
 
         private void Restart() {
             Hide();
-            StartLevel(_data, _onComplete);
+            StartLevel(_data, _onComplete, null);
         }
 
         private void EndLevel() {

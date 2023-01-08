@@ -1,10 +1,12 @@
 ﻿using _Game.Scripts.UI;
+using _Game.Scripts.View;
 using UnityEngine;
 
 namespace _Game.Scripts {
     public class App : MonoBehaviour {
-        private LevelRunner _currentRunner;
+        [SerializeField] private CameraController _cameraController;
 
+        private LevelRunner _currentRunner;
         private int _lastLevelIndex;
 
         private void Start() {
@@ -17,7 +19,7 @@ namespace _Game.Scripts {
         private void StartLevel(int levelIndex) {
             _lastLevelIndex = levelIndex;
             _currentRunner = new LevelRunner();
-            _currentRunner.StartLevel(DataStorage.Instance.Levels[levelIndex], OnWin);
+            _currentRunner.StartLevel(DataStorage.Instance.Levels[levelIndex], OnWin, _cameraController.FocusOnBoard);
         }
 
         private void EndLevel() {
