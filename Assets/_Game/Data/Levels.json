@@ -145,6 +145,25 @@
           "count" : 5
         }
       ]
+    },
+    {
+      "name": "lvl11",
+      "field": "222,222,222,222\\n222,222,222,222\\n222,222,222,222\\n222,222,222,222",
+      "targetPlant": "lv11final",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 10
+        },
+        {
+          "name": "sunflower",
+          "count" : 5
+        },
+        {
+          "name": "violet",
+          "count" : 5
+        }
+      ]
     }
   ]
 }

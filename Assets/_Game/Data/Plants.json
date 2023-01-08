@@ -10,7 +10,7 @@
     },
     {
       "name": "landysh",
-      "sprite": "landysh",
+      "sprite": "landish",
       "displayName": "La Landysh",
       "requirements": "311",
       "range" : "x,x\nx, \no, ",
@@ -31,6 +31,22 @@
       "requirements": "022",
       "range" : " , ,x, , \n , , , , \nx, ,o, ,x\n , , , , \n , ,x, , ",
       "effect": "2-1-1"
+    },
+    {
+      "name": "violet",
+      "sprite": "violet",
+      "displayName": "La Violet",
+      "requirements": "131",
+      "range" : "x, ,x\n ,o, \nx, ,x",
+      "effect": "-202"
+    },
+    {
+      "name": "Tulip",
+      "sprite": "Tulip",
+      "displayName": "La Tulip",
+      "requirements": "000",
+      "range" : " , ,x, , \n , , , , \nx, ,o, ,x\n , , , , \n , ,x, , ",
+      "effect": "000"
     },
     {
       "name": "lv1final",
@@ -109,6 +125,14 @@
       "sprite": "TEST",
       "displayName": "The TEST",
       "requirements": "333",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "lv11final",
+      "sprite": "TEST",
+      "displayName": "The TEST",
+      "requirements": "424",
       "range" : "o",
       "effect": "000"
     },
