@@ -279,6 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialPosition: {x: -3, y: -3, z: 0}
   _tilemap: {fileID: 1379697492}
+  _tilemapRenderer: {fileID: 1379697491}
   _tiles:
   - {fileID: 11400000, guid: 6da31d5ae6499cb4a93215ee0a276484, type: 2}
   - {fileID: 11400000, guid: 7b5392142c2e4ec499314a3bf376a4ec, type: 2}
@@ -933,7 +934,7 @@ SortingGroup:
   m_GameObject: {fileID: 1119925962}
   m_Enabled: 1
   m_SortingLayerID: 1914291959
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
 --- !u!1 &1228939717
 GameObject:

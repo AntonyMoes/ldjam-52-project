@@ -4,9 +4,7 @@ using _Game.Scripts.Data;
 using _Game.Scripts.DragAndDrop;
 using _Game.Scripts.Model;
 using _Game.Scripts.UI;
-using _Game.Scripts.UI.PlantInfo;
 using _Game.Scripts.View;
-using log4net.Filter;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -39,6 +37,7 @@ namespace _Game.Scripts {
 
         private void Show() {
             FieldView.Instance.Load(_field);
+            FieldView.Instance.Show();
 
             var plants = _data.availablePlants.ToDictionary(plant => GetPlantByName(plant.name), plant => plant.count);
             _plantsPanel = UIController.Instance.ShowPlantsPanel(plants, _targetPlant, OnDrag, OnDrop);
@@ -54,8 +53,10 @@ namespace _Game.Scripts {
             _resourceShowPanel.Hide();
             _mainMenuPanel.Hide();
             _restartPanel.Hide();
-            
-            FieldView.Instance.Clear();
+
+            FieldView.Instance.Hide(() => {
+                FieldView.Instance.Clear();
+            });
             
             onDone?.Invoke();
         }
@@ -104,9 +105,14 @@ namespace _Game.Scripts {
                     return;
                 }
 
+                if (_currentTile != null && _currentTile.CanPlant(plant)) {
+                    _currentTile.RemovePreview();
+                }
+
                 fieldView.HideAffectedTiles();
                 _currentTile = currentTile;
                 if (_currentTile != null && _currentTile.CanPlant(plant)) {
+                    _currentTile.PreviewPlant(plant);
                     fieldView.ShowAffectedTiles(plant, _currentTile);
                 }
             } else if (_currentTile != null) {

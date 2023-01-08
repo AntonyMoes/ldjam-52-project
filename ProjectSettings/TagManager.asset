@@ -50,6 +50,9 @@ TagManager:
   - name: TileOverlay
     uniqueID: 3204562773
     locked: 0
+  - name: Plants
+    uniqueID: 3235704391
+    locked: 0
   - name: Drag
     uniqueID: 1914291959
     locked: 0
