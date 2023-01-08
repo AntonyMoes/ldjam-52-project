@@ -20,7 +20,7 @@ namespace _Game.Scripts.UI {
         }
 
         private void OnLevelSelectClick() {
-            Hide(() => UIController.Instance.ShowLevelSelect(_startLevel));
+            Hide(() => UIController.Instance.ShowLevelSelectWindow(_startLevel));
         }
 
         private void OnSettingsClick() {

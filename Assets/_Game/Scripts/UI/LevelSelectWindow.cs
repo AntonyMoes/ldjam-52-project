@@ -32,7 +32,7 @@ namespace _Game.Scripts.UI {
         }
 
         private void OnBackClick() {
-            Hide(() => UIController.Instance.ShowMainMenu(_startLevel));
+            Hide(() => UIController.Instance.ShowMainMenuWindow());
         }
 
         private void OnItemClick(int levelIndex) {

@@ -5,6 +5,7 @@ using _Game.Scripts.DragAndDrop;
 using _Game.Scripts.Model;
 using _Game.Scripts.UI;
 using _Game.Scripts.View;
+using log4net.Filter;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -16,6 +17,8 @@ namespace _Game.Scripts {
         private Field _field;
         private PlantsPanel _plantsPanel;
         private ResourceShowPanel _resourceShowPanel;
+        private MainMenuPanel _mainMenuPanel;
+        private RestartPanel _restartPanel;
 
         private Plant _draggedPlant;
         private DragComponent _dragComponent;
@@ -26,15 +29,41 @@ namespace _Game.Scripts {
             _onComplete = onComplete;
 
             _field = new Field(_data.Field);
+            _targetPlant = GetPlantByName(_data.targetPlant);
+
+            Show();
+        }
+
+        private void Show() {
             FieldView.Instance.Load(_field);
 
-            _targetPlant = GetPlantByName(_data.targetPlant);
             var plants = _data.availablePlants.ToDictionary(plant => GetPlantByName(plant.name), plant => plant.count);
             _plantsPanel = UIController.Instance.ShowPlantsPanel(plants, _targetPlant, OnDrag, OnDrop);
-
             _resourceShowPanel = UIController.Instance.ShowResourceShowPanel();
 
-            Plant GetPlantByName(string name) => new Plant(DataStorage.Instance.Plants.WithName(name));
+            _mainMenuPanel = UIController.Instance.ShowMainMenuPanel(EndLevel);
+            _restartPanel = UIController.Instance.ShowRestartPanel(Restart);
+        }
+
+        public void Hide(Action onDone = null) {
+            // TODO add animations
+            _plantsPanel.Hide();
+            _resourceShowPanel.Hide();
+            _mainMenuPanel.Hide();
+            _restartPanel.Hide();
+            
+            FieldView.Instance.Clear();
+            
+            onDone?.Invoke();
+        }
+
+        private void Restart() {
+            Hide();
+            StartLevel(_data, _onComplete);
+        }
+
+        private void EndLevel() {
+            Hide(() => UIController.Instance.ShowMainMenuWindow());
         }
 
         private void OnDrag(Plant plant, DragComponent dragComponent) {
@@ -84,14 +113,10 @@ namespace _Game.Scripts {
         }
 
         private void OnLevelWon() {
-            // TODO add animations
-
-            _plantsPanel.Hide();
-            _resourceShowPanel.Hide();
-            
-            FieldView.Instance.Clear();
-
+            Hide();
             _onComplete?.Invoke();
         }
+        
+        private static Plant GetPlantByName(string name) => new Plant(DataStorage.Instance.Plants.WithName(name));
     }
 }

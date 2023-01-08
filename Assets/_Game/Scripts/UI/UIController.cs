@@ -12,17 +12,23 @@ namespace _Game.Scripts.UI {
         [SerializeField] private LevelSelectWindow _levelSelectWindow;
         [SerializeField] private PlantsPanel _plantsPanel;
         [SerializeField] private ResourceShowPanel _resourceShowPanel;
+        [SerializeField] private LevelWinPanel _levelWinPanel;
+        [SerializeField] private RestartPanel _restartPanel;
+        [SerializeField] private MainMenuPanel _mainMenuPanel;
 
         [SerializeField] private Transform _hider;
         [SerializeField] private Transform _windows;
 
-        public MainMenuWindow ShowMainMenu(Action<int> startLevel) {
-            _mainMenuWindow.Load(startLevel);
+        public MainMenuWindow ShowMainMenuWindow(Action<int> startLevel = null) {
+            if (startLevel != null) {
+                _mainMenuWindow.Load(startLevel);
+            }
+
             _mainMenuWindow.Show();
             return _mainMenuWindow;
         }
 
-        public LevelSelectWindow ShowLevelSelect(Action<int> startLevel) {
+        public LevelSelectWindow ShowLevelSelectWindow(Action<int> startLevel) {
             _levelSelectWindow.Load(startLevel);
             _levelSelectWindow.Show();
             return _levelSelectWindow;
@@ -37,6 +43,24 @@ namespace _Game.Scripts.UI {
         public ResourceShowPanel ShowResourceShowPanel() {
             _resourceShowPanel.Show();
             return _resourceShowPanel;
+        }
+
+        public LevelWinPanel ShowLevelWinPanel(int? nextLevelIndex, Action endLevel, Action<int> startLevel) {
+            _levelWinPanel.Load(nextLevelIndex, endLevel, startLevel);
+            _levelWinPanel.Show();
+            return _levelWinPanel;
+        }
+
+        public MainMenuPanel ShowMainMenuPanel(Action endLevel) {
+            _mainMenuPanel.Load(endLevel);
+            _mainMenuPanel.Show();
+            return _mainMenuPanel;
+        }
+
+        public RestartPanel ShowRestartPanel(Action restart) {
+            _restartPanel.Load(restart);
+            _restartPanel.Show();
+            return _restartPanel;
         }
 
         private void PrepareWindow(UIElement window) {

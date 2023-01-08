@@ -9,14 +9,14 @@ namespace _Game.Scripts.Model {
 
         public Vector2Int Size => new Vector2Int(_field.Length, _field[0].Length);
 
-        public IEnumerable<Vector2Int> Iterate() {
-            return Enumerable
-                .Range(0, Size.x)
-                .Select(row => Enumerable
-                    .Range(0, Size.y)
-                    .Select(column => new Vector2Int(row, column)))
-                .SelectMany(pos => pos);
-        }
+        // public IEnumerable<Vector2Int> Iterate() {
+        //     return Enumerable
+        //         .Range(0, Size.x)
+        //         .Select(row => Enumerable
+        //             .Range(0, Size.y)
+        //             .Select(column => new Vector2Int(row, column)))
+        //         .SelectMany(pos => pos);
+        // }
 
         public Field(Dictionary<Resource, int>[][] fieldData) {
             _field = fieldData

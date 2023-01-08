@@ -36,7 +36,7 @@ namespace _Game.Scripts.View {
 
             var rng = new Rng(Rng.RandomSeed);
 
-            foreach (var position in _field.Iterate()) {
+            foreach (var position in _field.Size.Iterate()) {
                 // here wee can basically modify axis directions
                 var tilePosition = FieldToMapPosition(position);
                 _tilemap.SetTile(tilePosition, rng.NextChoice(_tiles));
@@ -66,7 +66,7 @@ namespace _Game.Scripts.View {
         }
         
         public void ShowAvailableTiles(Plant plant) {
-            foreach (var position in _field.Iterate()) {
+            foreach (var position in _field.Size.Iterate()) {
                 if (_field.CanPlantAt(plant, position)) {
                     _availableMap.SetTile(FieldToMapPosition(position), _availableTile);
                 }

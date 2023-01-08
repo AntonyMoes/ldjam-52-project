@@ -9,6 +9,7 @@ namespace _Game.Scripts.Model {
     public class Plant {
         private readonly PlantData _data;
         public Dictionary<Resource, int> Requirements => _data.Requirements;
+        public Vector2Int[] Range => _data.Range;
         public Sprite Sprite => ArtStorage.Instance.GetSprite(_data.sprite);
 
         public Plant(PlantData data) {
