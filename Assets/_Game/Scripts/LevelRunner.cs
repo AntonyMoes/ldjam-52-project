@@ -88,6 +88,8 @@ namespace _Game.Scripts {
 
             _plantsPanel.Hide();
             _resourceShowPanel.Hide();
+            
+            FieldView.Instance.Clear();
 
             _onComplete?.Invoke();
         }

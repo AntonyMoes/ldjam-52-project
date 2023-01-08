@@ -7,6 +7,7 @@ using UnityEngine;
 namespace _Game.Scripts.View {
     public class TileView : MonoBehaviour {
         [SerializeField] private ResourceGroup[] _resourceGroups;
+        [SerializeField] private SpriteRenderer _frame;
         
         public Vector2Int Position { get; private set; }
         public IDictionary<Resource, int> Resources => _field.GetAt(Position).Resources;
@@ -24,6 +25,8 @@ namespace _Game.Scripts.View {
                 resourceGroup.Load();
                 resourceGroup.UpdateResources(tile.Resources);
             }
+
+            _frame.enabled = false;
         }
 
         public bool CanPlant(Plant plant) {
@@ -35,12 +38,14 @@ namespace _Game.Scripts.View {
         }
 
         public void ShowResources(IDictionary<Resource,int> update = null) {
+            _frame.enabled = true;
             foreach (var resourceGroup in _resourceGroups) {
                 resourceGroup.Show(update);
             }
         }
 
         public void HideResources() {
+            _frame.enabled = false;
             foreach (var resourceGroup in _resourceGroups) {
                 resourceGroup.Hide();
             }

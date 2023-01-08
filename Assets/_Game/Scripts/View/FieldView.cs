@@ -104,6 +104,7 @@ namespace _Game.Scripts.View {
             _tilemap.ClearAllTiles();
 
             HideAvailableTiles();
+            HideAffectedTiles();
 
             foreach (var tileView in _tileViews) {
                 Destroy(tileView.gameObject);

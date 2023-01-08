@@ -14,22 +14,14 @@ namespace _Game.Scripts.View {
         
         public void Load() {
             var color = ArtStorage.Instance.ResourceColors[_resource];
-            // foreach (var image in _images) {
-            //     image.color = color;
-            // }
-            
+            var borderColor = ArtStorage.Instance.BorderColors[_resource];
+
             foreach (var resourceView in _resourceViews) {
-                resourceView.Load(color);
+                resourceView.Load(color, borderColor);
             }
         }
 
         public void UpdateResources(IDictionary<Resource, int> resources) {
-            // var value = resources[_resource];
-            // for (var i = 0; i < _resourceViews.Length; i++) {
-            //     // _images[i].enabled = i < value;
-            //     _resourceViews[i].SetState(i < value ? ResourceView.State.Enabled : ResourceView.State.Disabled);
-            // }
-
             _currentResources = resources;
         }
 
@@ -39,7 +31,6 @@ namespace _Game.Scripts.View {
             var currentValue = _currentResources?[_resource] ?? 0;
 
             for (var i = 0; i < _resourceViews.Length; i++) {
-                // _images[i].enabled = i < value;
                 var state = (i < currentValue, i < updatedValue) switch {
                     (true, true) => ResourceView.State.Enabled,
                     (true, false) => ResourceView.State.Removed,

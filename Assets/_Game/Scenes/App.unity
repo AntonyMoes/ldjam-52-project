@@ -1251,11 +1251,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _resourceColors:
   - resource: 0
+    color: {r: 1, g: 0.39607844, b: 0.39607844, a: 1}
+  - resource: 1
+    color: {r: 1, g: 0.9647059, b: 0.41960785, a: 1}
+  - resource: 2
+    color: {r: 0.33333334, g: 0.8039216, b: 1, a: 1}
+  _borderColors:
+  - resource: 0
     color: {r: 1, g: 0, b: 0, a: 1}
   - resource: 1
-    color: {r: 1, g: 0.92250216, b: 0, a: 1}
+    color: {r: 1, g: 0.69411767, b: 0.29803923, a: 1}
   - resource: 2
-    color: {r: 0, g: 0.2456398, b: 1, a: 1}
+    color: {r: 0, g: 0.28235295, b: 1, a: 1}
 --- !u!1 &850999647
 GameObject:
   m_ObjectHideFlags: 0
