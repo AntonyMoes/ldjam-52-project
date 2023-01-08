@@ -8,10 +8,25 @@ using UnityEngine;
 
 namespace _Game.Scripts.UI {
     public class UIController : SingletonBehaviour<UIController> {
+        [SerializeField] private MainMenuWindow _mainMenuWindow;
+        [SerializeField] private LevelSelectWindow _levelSelectWindow;
         [SerializeField] private PlantsPanel _plantsPanel;
         [SerializeField] private ResourceShowPanel _resourceShowPanel;
+
         [SerializeField] private Transform _hider;
         [SerializeField] private Transform _windows;
+
+        public MainMenuWindow ShowMainMenu(Action<int> startLevel) {
+            _mainMenuWindow.Load(startLevel);
+            _mainMenuWindow.Show();
+            return _mainMenuWindow;
+        }
+
+        public LevelSelectWindow ShowLevelSelect(Action<int> startLevel) {
+            _levelSelectWindow.Load(startLevel);
+            _levelSelectWindow.Show();
+            return _levelSelectWindow;
+        }
 
         public PlantsPanel ShowPlantsPanel(Dictionary<Plant, int> plants, Plant targetPlant, Action<Plant, DragComponent> onDrag, Action<Plant, DragComponent, DropComponent> onDrop) {
             _plantsPanel.Load(plants, targetPlant, onDrag, onDrop);

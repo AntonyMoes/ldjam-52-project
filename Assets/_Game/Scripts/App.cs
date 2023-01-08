@@ -1,5 +1,6 @@
 ﻿using System;
 using _Game.Scripts.Data;
+using _Game.Scripts.UI;
 using UnityEngine;
 
 namespace _Game.Scripts {
@@ -10,12 +11,16 @@ namespace _Game.Scripts {
             DataStorage.Instance.Init();
             ArtStorage.Instance.Init();
 
-            // TODO
+            UIController.Instance.ShowMainMenu(StartLevel);
+        }
+
+        private void StartLevel(int levelIndex) {
             _currentRunner = new LevelRunner();
-            _currentRunner.StartLevel(DataStorage.Instance.Levels[0], OnWin);
+            _currentRunner.StartLevel(DataStorage.Instance.Levels[levelIndex], OnWin);
         }
 
         private void OnWin() {
+            _currentRunner = null;
             // TODO
             Debug.LogError("WIIIIIN!");
         }

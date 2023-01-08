@@ -10,7 +10,7 @@ namespace _Game.Scripts.View {
     public class FieldView : SingletonBehaviour<FieldView> {
         [SerializeField] private Vector3Int _initialPosition;
         [SerializeField] private Tilemap _tilemap;
-        [SerializeField] private Tile _tile;
+        [SerializeField] private Tile[] _tiles;
 
         [SerializeField] private Tilemap _availableMap;
         [SerializeField] private Tilemap _affectedMap;
@@ -34,10 +34,12 @@ namespace _Game.Scripts.View {
             Clear();
             _field = field;
 
+            var rng = new Rng(Rng.RandomSeed);
+
             foreach (var position in _field.Iterate()) {
                 // here wee can basically modify axis directions
                 var tilePosition = FieldToMapPosition(position);
-                _tilemap.SetTile(tilePosition, _tile);
+                _tilemap.SetTile(tilePosition, rng.NextChoice(_tiles));
 
                 var tileView = Instantiate(_tileViewPrefab, _tileViewsParent);
                 tileView.transform.position = _tilemap.CellToWorld(tilePosition) + _tileViewOffset;
