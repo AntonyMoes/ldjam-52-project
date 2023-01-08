@@ -105,6 +105,14 @@
       "effect": "000"
     },
     {
+      "name": "lv10final",
+      "sprite": "TEST",
+      "displayName": "The TEST",
+      "requirements": "333",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
       "name": "lvXfinal",
       "sprite": "TEST",
       "displayName": "The TEST",

@@ -126,6 +126,25 @@
           "count" : 5
         }
       ]
+    },
+    {
+      "name": "lvl10",
+      "field": "022,022,022,022\\n022,022,022,022\\n022,022,022,022\\n022,022,022,022",
+      "targetPlant": "lv10final",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 5
+        },
+        {
+          "name": "landysh",
+          "count" : 5
+        },
+        {
+          "name": "lilly",
+          "count" : 5
+        }
+      ]
     }
   ]
 }
