@@ -5,8 +5,8 @@ using GeneralUtils;
 
 namespace _Game.Scripts.Model {
     public class FieldTile {
-        private Dictionary<Resource, int> _resources;
-        public Dictionary<Resource, int> Resources {
+        private IDictionary<Resource, int> _resources;
+        public IDictionary<Resource, int> Resources {
             get => _resources;
             set {
                 _resources = value;

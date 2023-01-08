@@ -9,6 +9,7 @@ using UnityEngine;
 namespace _Game.Scripts.UI {
     public class UIController : SingletonBehaviour<UIController> {
         [SerializeField] private PlantsPanel _plantsPanel;
+        [SerializeField] private ResourceShowPanel _resourceShowPanel;
         [SerializeField] private Transform _hider;
         [SerializeField] private Transform _windows;
 
@@ -16,6 +17,11 @@ namespace _Game.Scripts.UI {
             _plantsPanel.Load(plants, targetPlant, onDrag, onDrop);
             _plantsPanel.Show();
             return _plantsPanel;
+        }
+
+        public ResourceShowPanel ShowResourceShowPanel() {
+            _resourceShowPanel.Show();
+            return _resourceShowPanel;
         }
 
         private void PrepareWindow(UIElement window) {

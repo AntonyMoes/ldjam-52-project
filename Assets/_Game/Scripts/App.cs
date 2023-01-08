@@ -8,6 +8,8 @@ namespace _Game.Scripts {
 
         private void Start() {
             DataStorage.Instance.Init();
+            ArtStorage.Instance.Init();
+
             // TODO
             _currentRunner = new LevelRunner();
             _currentRunner.StartLevel(DataStorage.Instance.Levels[0], OnWin);

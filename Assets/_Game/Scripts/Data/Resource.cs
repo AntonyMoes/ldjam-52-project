@@ -17,7 +17,7 @@ namespace _Game.Scripts.Data {
         private const string NotNegativeResourceMatcher = "\\d";
 
         private const int MinResourceValue = 0;
-        private const int MaxResourceValue = 5;
+        private const int MaxResourceValue = 4;
 
         private static readonly Resource[] Resources = (Resource[]) Enum.GetValues(typeof(Resource));
 
@@ -38,7 +38,7 @@ namespace _Game.Scripts.Data {
                     i => Mathf.Clamp(int.Parse(match.Groups[i + 1].Value), MinResourceValue, MaxResourceValue));
         }
 
-        public static Dictionary<Resource, int> CombineWith(this IDictionary<Resource, int> resources,
+        public static IDictionary<Resource, int> CombineWith(this IDictionary<Resource, int> resources,
             IDictionary<Resource, int> otherResources, bool add = true, bool clamp = false) {
             var multiplier = add ? 1 : -1;
 

@@ -54,6 +54,7 @@ namespace _Game.Scripts.UI {
             if (item != null) {
                 if (--item.Count == 0) {
                     Destroy(item.gameObject);
+                    _plantItems.Remove(item);
                 }
             }
         }

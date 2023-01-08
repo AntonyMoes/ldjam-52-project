@@ -47,7 +47,7 @@ namespace _Game.Scripts.Model {
             return true;
         }
 
-        public (Vector2Int offset, Dictionary<Resource, int> update)[] GetUpdates(Plant plant, Vector2Int position) {
+        public (Vector2Int offset, IDictionary<Resource, int> update)[] GetUpdates(Plant plant, Vector2Int position) {
             return plant.GetUpdates(offset => GetAt(offset + position)?.Resources);
         }
 

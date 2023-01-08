@@ -15,6 +15,7 @@ namespace _Game.Scripts {
         private Plant _targetPlant;
         private Field _field;
         private PlantsPanel _plantsPanel;
+        private ResourceShowPanel _resourceShowPanel;
 
         private Plant _draggedPlant;
         private DragComponent _dragComponent;
@@ -30,6 +31,8 @@ namespace _Game.Scripts {
             _targetPlant = GetPlantByName(_data.targetPlant);
             var plants = _data.availablePlants.ToDictionary(plant => GetPlantByName(plant.name), plant => plant.count);
             _plantsPanel = UIController.Instance.ShowPlantsPanel(plants, _targetPlant, OnDrag, OnDrop);
+
+            _resourceShowPanel = UIController.Instance.ShowResourceShowPanel();
 
             Plant GetPlantByName(string name) => new Plant(DataStorage.Instance.Plants.WithName(name));
         }
@@ -54,8 +57,7 @@ namespace _Game.Scripts {
                 _plantsPanel.OnPlanted(plant);
                 Debug.LogWarning($"PLANTED AT {tileView.Position}");
                 if (plant == _targetPlant) {
-                    // TODO maybe also some animations
-                    _onComplete?.Invoke();
+                    OnLevelWon();
                 }
             } else {
                 Debug.LogWarning($"COULD NOT PLANT AT {tileView.Position}! Requirements: {plant.Requirements.Serialize()}; Resources: {tileView.Resources.Serialize()}");
@@ -79,6 +81,15 @@ namespace _Game.Scripts {
                 fieldView.HideAffectedTiles();
                 _currentTile = null;
             }
+        }
+
+        private void OnLevelWon() {
+            // TODO add animations
+
+            _plantsPanel.Hide();
+            _resourceShowPanel.Hide();
+
+            _onComplete?.Invoke();
         }
     }
 }
