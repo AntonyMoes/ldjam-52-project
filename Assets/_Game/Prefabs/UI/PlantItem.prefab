@@ -299,5 +299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6fc926537344caba8ed65e6d5f10ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plant: {fileID: 7874630311506263532}
+  _backGround: {fileID: 7874630311506263532}
+  _plant: {fileID: 7874630311479463133}
   _countText: {fileID: 7874630309567623965}

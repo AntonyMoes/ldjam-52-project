@@ -10,6 +10,7 @@ namespace _Game.Scripts.Model {
     public class Plant {
         private readonly PlantData _data;
         public Dictionary<Resource, int> Requirements => _data.Requirements;
+        public Dictionary<Resource, int> Effect => _data.Effect;
         public Vector2Int[] Range => _data.Range;
         public string Name => _data.displayName;
         public Sprite Sprite => ArtStorage.Instance.GetSprite(_data.sprite);
