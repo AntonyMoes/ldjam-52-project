@@ -25,9 +25,17 @@
       "effect": "04-4"
     },
     {
+      "name": "lilly",
+      "sprite": "lilly",
+      "displayName": "La Lilly",
+      "requirements": "022",
+      "range" : " , ,x, , \n , , , , \nx, ,o, ,x\n , , , , \n , ,x, , ",
+      "effect": "2-1-1"
+    },
+    {
       "name": "lv1final",
       "sprite": "tomat",
-      "displayName": "TOMATO",
+      "displayName": "LA TOMATO",
       "requirements": "211",
       "range" : "o",
       "effect": "000"
@@ -77,6 +85,30 @@
       "sprite": "TEST",
       "displayName": "The TEST",
       "requirements": "242",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "lv8final",
+      "sprite": "TEST",
+      "displayName": "The TEST",
+      "requirements": "400",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "lv9final",
+      "sprite": "TEST",
+      "displayName": "The TEST",
+      "requirements": "414",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "lvXfinal",
+      "sprite": "TEST",
+      "displayName": "The TEST",
+      "requirements": "000",
       "range" : "o",
       "effect": "000"
     }

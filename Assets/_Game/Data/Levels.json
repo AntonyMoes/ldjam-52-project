@@ -100,6 +100,32 @@
           "count" : 1
         }
       ]
+    },
+    {
+      "name": "lvl8",
+      "field": "022,022,022\\n022,022,022\\n022,022,022",
+      "targetPlant": "lv8final",
+      "availablePlants": [
+        {
+          "name": "lilly",
+          "count" : 3
+        }
+      ]
+    },
+    {
+      "name": "lvl9",
+      "field": "022,022,022,022\\n022,022,022,022\\n022,022,022,022\\n022,022,022,022",
+      "targetPlant": "lv9final",
+      "availablePlants": [
+        {
+          "name": "lilly",
+          "count" : 5
+        },
+        {
+          "name": "rose",
+          "count" : 5
+        }
+      ]
     }
   ]
 }
