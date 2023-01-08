@@ -3,14 +3,10 @@
     {
       "name": "lvl1",
       "field": "111,111\\n111,111",
-      "targetPlant": "tomat",
+      "targetPlant": "lv1final",
       "availablePlants": [
         {
           "name": "rose",
-          "count" : 1
-        },
-        {
-          "name": "tomat",
           "count" : 1
         }
       ]
@@ -18,22 +14,18 @@
     {
       "name": "lvl2",
       "field": "111,111,111\\n111,111,111\\n111,111,111",
-      "targetPlant": "potat",
+      "targetPlant": "lv2final",
       "availablePlants": [
         {
           "name": "rose",
           "count" : 3
-        },
-        {
-          "name": "potat",
-          "count" : 1
         }
       ]
     },
     {
       "name": "lvl3",
       "field": "111,111,111\\n111,111,111\\n111,111,111",
-      "targetPlant": "pumpkin",
+      "targetPlant": "lv3final",
       "availablePlants": [
         {
           "name": "rose",
@@ -41,10 +33,6 @@
         },
         {
           "name": "landysh",
-          "count" : 1
-        },
-        {
-          "name": "pumpkin",
           "count" : 1
         }
       ]
@@ -52,7 +40,7 @@
     {
       "name": "lvl4",
       "field": "111,111,111\\n111,111,111\\n111,111,111",
-      "targetPlant": "yggdrasil",
+      "targetPlant": "lv4final",
       "availablePlants": [
         {
           "name": "rose",
@@ -61,9 +49,35 @@
         {
           "name": "landysh",
           "count" : 2
+        }
+      ]
+    },
+    {
+      "name": "lvl5",
+      "field": "222,222,222\\n222,222,222\\n222,222,222",
+      "targetPlant": "lv5final",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 2
         },
         {
-          "name": "yggdrasil",
+          "name": "sunflower",
+          "count" : 1
+        }
+      ]
+    },
+    {
+      "name": "lvl6",
+      "field": "111,111,111\\n111,222,111\\n111,111,111",
+      "targetPlant": "lv6final",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 2
+        },
+        {
+          "name": "sunflower",
           "count" : 1
         }
       ]

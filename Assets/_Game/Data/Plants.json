@@ -6,7 +6,7 @@
       "displayName": "La Rose",
       "requirements": "111",
       "range" : " ,x, \nx,o,x\n ,x, ",
-      "effect": "100"
+      "effect": "101"
     },
     {
       "name": "landysh",
@@ -17,7 +17,15 @@
       "effect": "010"
     },
     {
-      "name": "tomat",
+      "name": "sunflower",
+      "sprite": "sunflower",
+      "displayName": "La Sunflower",
+      "requirements": "222",
+      "range" : "x,x,x\nx,o,x\nx,x,x",
+      "effect": "04-2"
+    },
+    {
+      "name": "lv1final",
       "sprite": "tomat",
       "displayName": "TOMATO",
       "requirements": "211",
@@ -25,7 +33,7 @@
       "effect": "000"
     },
     {
-      "name": "potat",
+      "name": "lv2final",
       "sprite": "potat",
       "displayName": "LE POTAT",
       "requirements": "400",
@@ -33,7 +41,7 @@
       "effect": "000"
     },
     {
-      "name": "pumpkin",
+      "name": "lv3final",
       "sprite": "pumpkin",
       "displayName": "LE pumpkin",
       "requirements": "121",
@@ -41,10 +49,26 @@
       "effect": "000"
     },
     {
-      "name": "yggdrasil",
+      "name": "lv4final",
       "sprite": "yggdrasil",
       "displayName": "YGGDRASIL",
       "requirements": "131",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "lv5final",
+      "sprite": "kabachok",
+      "displayName": "The Kabachok",
+      "requirements": "042",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "lv6final",
+      "sprite": "kabachok",
+      "displayName": "The Kabachok",
+      "requirements": "042",
       "range" : "o",
       "effect": "000"
     }
