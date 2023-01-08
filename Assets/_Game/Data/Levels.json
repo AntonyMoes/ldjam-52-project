@@ -179,6 +179,25 @@
           "count" : 5
         }
       ]
+    },
+    {
+      "name": "lvl13",
+      "field": "021,010,112\\n111,030,201\\n111,000,101",
+      "targetPlant": "lv13final",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 4
+        },
+        {
+          "name": "violet",
+          "count" : 1
+        },
+        {
+          "name": "tulip",
+          "count" : 2
+        }
+      ]
     }
   ]
 }

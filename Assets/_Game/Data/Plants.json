@@ -41,12 +41,12 @@
       "effect": "-202"
     },
     {
-      "name": "Tulip",
-      "sprite": "Tulip",
+      "name": "tulip",
+      "sprite": "tulip",
       "displayName": "La Tulip",
-      "requirements": "000",
-      "range" : " , ,x, , \n , , , , \nx, ,o, ,x\n , , , , \n , ,x, , ",
-      "effect": "000"
+      "requirements": "001",
+      "range" : "x, ,x\nx, ,x\nx,o,x",
+      "effect": "1-10"
     },
     {
       "name": "lv1final",
@@ -141,6 +141,14 @@
       "sprite": "yggdrasil",
       "displayName": "YGGDRASIL",
       "requirements": "424",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "lv13final",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
+      "requirements": "404",
       "range" : "o",
       "effect": "000"
     },
