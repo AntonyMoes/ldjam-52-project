@@ -1,13 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using _Game.Scripts.Data;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace _Game.Scripts.View {
     public class ResourceGroup : MonoBehaviour {
         [SerializeField] private Resource _resource;
-        // [SerializeField] private Image[] _images;
         [SerializeField] private ResourceView[] _resourceViews;
 
         private IDictionary<Resource, int> _currentResources;

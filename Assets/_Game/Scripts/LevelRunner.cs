@@ -47,7 +47,7 @@ namespace _Game.Scripts {
             _restartPanel = UIController.Instance.ShowRestartPanel(Restart);
         }
 
-        public void Hide(Action onDone = null) {
+        private void Hide(Action onDone = null) {
             // TODO add animations
             _plantsPanel.Hide();
             _resourceShowPanel.Hide();
@@ -86,12 +86,15 @@ namespace _Game.Scripts {
                 return;
             }
 
-            if (tileView.PlantAt(plant)) {
+            if (tileView.PlantAt(plant, out var plantProcess)) {
                 _plantsPanel.OnPlanted(plant);
                 Debug.LogWarning($"PLANTED AT {tileView.Position}");
-                if (plant == _targetPlant) {
-                    OnLevelWon();
-                }
+
+                plantProcess.Run(() => {
+                    if (plant == _targetPlant) {
+                        OnLevelWon();
+                    }
+                });
             } else {
                 Debug.LogWarning($"COULD NOT PLANT AT {tileView.Position}! Requirements: {plant.Requirements.Serialize()}; Resources: {tileView.Resources.Serialize()}");
             }

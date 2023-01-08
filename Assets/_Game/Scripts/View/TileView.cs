@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using _Game.Scripts.Data;
 using _Game.Scripts.Model;
 using GeneralUtils;
+using GeneralUtils.Processes;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace _Game.Scripts.View {
     public class TileView : MonoBehaviour {
@@ -10,18 +13,22 @@ namespace _Game.Scripts.View {
         [SerializeField] private SpriteRenderer _frame;
         [SerializeField] private SpriteRenderer _plant;
         [SerializeField] private SpriteRenderer _tempTile;
+        [SerializeField] private SortingGroup _group;
         
         public Vector2Int Position { get; private set; }
         public IDictionary<Resource, int> Resources => _field.GetAt(Position).Resources;
 
         private Field _field;
+        private Func<Vector2Int, Vector2Int[], Process> _animatePlant;
 
-        public void Load(Field field, Vector2Int position, Sprite tileSprite) {
+        public void Load(Field field, Vector2Int position, Sprite tileSprite, Func<Vector2Int, Vector2Int[], Process> animatePlant) {
             _field = field;
             Position = position;
 
+            _animatePlant = animatePlant;
+
             var tile = _field.GetAt(Position);
-            tile.OnTileUpdate.Subscribe(OnTileUpdate);
+            // tile.OnTileUpdate.Subscribe(OnTileUpdate);
 
             foreach (var resourceGroup in _resourceGroups) {
                 resourceGroup.Load();
@@ -31,7 +38,7 @@ namespace _Game.Scripts.View {
             HideResources();
 
             _tempTile.sprite = tileSprite;
-            _tempTile.sortingOrder = -Position.x - Position.y;
+            _group.sortingOrder = -Position.x - Position.y;
             ToggleTempTile(false);
         }
 
@@ -43,8 +50,9 @@ namespace _Game.Scripts.View {
             return _field.CanPlantAt(plant, Position);
         }
 
-        public bool PlantAt(Plant plant) {
+        public bool PlantAt(Plant plant, out Process plantProcess) {
             if (!_field.PlantAt(plant, Position)) {
+                plantProcess = new DummyProcess();
                 return false;
             }
 
@@ -54,6 +62,7 @@ namespace _Game.Scripts.View {
 
             HideResources();
 
+            plantProcess = _animatePlant?.Invoke(Position, plant.Range);
             return true;
         }
 
@@ -85,15 +94,18 @@ namespace _Game.Scripts.View {
             }
         }
 
-        private void OnTileUpdate() {
+        public void OnTileUpdate() {
             var tile = _field.GetAt(Position);
             foreach (var resourceGroup in _resourceGroups) {
                 resourceGroup.UpdateResources(tile.Resources);
+                if (_frame.enabled) {
+                    resourceGroup.Show();
+                }
             }
         }
 
         private void OnDestroy() {
-            _field.GetAt(Position).OnTileUpdate.Unsubscribe(OnTileUpdate);
+            // _field.GetAt(Position).OnTileUpdate.Unsubscribe(OnTileUpdate);
         }
     }
 }
