@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using _Game.Scripts.Data;
 using GeneralUtils;
+using TMPro;
 using UnityEngine;
 
 namespace _Game.Scripts.Model {
@@ -10,6 +11,7 @@ namespace _Game.Scripts.Model {
         private readonly PlantData _data;
         public Dictionary<Resource, int> Requirements => _data.Requirements;
         public Vector2Int[] Range => _data.Range;
+        public string Name => _data.displayName;
         public Sprite Sprite => ArtStorage.Instance.GetSprite(_data.sprite);
 
         public Plant(PlantData data) {

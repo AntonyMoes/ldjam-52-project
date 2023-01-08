@@ -4,6 +4,7 @@ using _Game.Scripts.Data;
 using _Game.Scripts.DragAndDrop;
 using _Game.Scripts.Model;
 using _Game.Scripts.UI;
+using _Game.Scripts.UI.FlowerInfo;
 using _Game.Scripts.View;
 using log4net.Filter;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace _Game.Scripts {
         private ResourceShowPanel _resourceShowPanel;
         private MainMenuPanel _mainMenuPanel;
         private RestartPanel _restartPanel;
+        private PlantInfoPanel _plantInfoPanel;
 
         private Plant _draggedPlant;
         private DragComponent _dragComponent;
@@ -67,12 +69,18 @@ namespace _Game.Scripts {
         }
 
         private void OnDrag(Plant plant, DragComponent dragComponent) {
+            // TODO
+            _plantInfoPanel = UIController.Instance.ShowPlantInfoPanel(plant);
+
             _draggedPlant = plant;
             _dragComponent = dragComponent;
             FieldView.Instance.ShowAvailableTiles(plant);
         }
         
         private void OnDrop(Plant plant, DragComponent dragComponent, DropComponent dropComponent) {
+            _plantInfoPanel.Hide();
+            _plantInfoPanel = null;
+
             _draggedPlant = null;
             FieldView.Instance.HideAvailableTiles();
 

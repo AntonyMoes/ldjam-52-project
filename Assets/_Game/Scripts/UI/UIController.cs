@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using _Game.Scripts.DragAndDrop;
 using _Game.Scripts.Model;
+using _Game.Scripts.UI.FlowerInfo;
 using GeneralUtils;
 using GeneralUtils.UI;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace _Game.Scripts.UI {
         [SerializeField] private LevelWinPanel _levelWinPanel;
         [SerializeField] private RestartPanel _restartPanel;
         [SerializeField] private MainMenuPanel _mainMenuPanel;
+        [SerializeField] private PlantInfoPanel _plantInfoPanel;
 
         [SerializeField] private Transform _hider;
         [SerializeField] private Transform _windows;
@@ -61,6 +63,12 @@ namespace _Game.Scripts.UI {
             _restartPanel.Load(restart);
             _restartPanel.Show();
             return _restartPanel;
+        }
+
+        public PlantInfoPanel ShowPlantInfoPanel(Plant plant) {
+            _plantInfoPanel.Load(plant);
+            _plantInfoPanel.Show();
+            return _plantInfoPanel;
         }
 
         private void PrepareWindow(UIElement window) {

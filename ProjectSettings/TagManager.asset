@@ -44,11 +44,11 @@ TagManager:
   - name: Tiles
     uniqueID: 1545151943
     locked: 0
+  - name: TileStatus
+    uniqueID: 3215640431
+    locked: 0
   - name: TileOverlay
     uniqueID: 3204562773
-    locked: 0
-  - name: TileDecor
-    uniqueID: 3215640431
     locked: 0
   - name: Drag
     uniqueID: 1914291959

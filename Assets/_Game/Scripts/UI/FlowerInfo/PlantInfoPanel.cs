@@ -6,41 +6,50 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _Game.Scripts.UI {
-    public class FlowerInfoPanel : UIElement {
-        [SerializeField] private Image _flower;
-        [SerializeField] private TextMeshProUGUI _flowerName;
+namespace _Game.Scripts.UI.FlowerInfo {
+    public class PlantInfoPanel : UIElement {
+        [SerializeField] private TextMeshProUGUI _plantName;
 
         [SerializeField] private GridLayoutGroup _rangeParent;
         [SerializeField] private RangeItem _rangeItemPrefab;
         private readonly List<RangeItem> _rangeItems = new List<RangeItem>();
 
         public void Load(Plant plant) {
+            Clear();
+            _plantName.text = plant.Name;
+            
             LoadRange(plant.Range);
             // LoadResourceGroup
             // LoadResourceGroup
         }
 
         private void LoadRange(Vector2Int[] range) {
-            var minX = range.Min(offset => offset.x);
-            var minY = range.Min(offset => offset.y);
-            var maxX = range.Max(offset => offset.x);
-            var maxY = range.Max(offset => offset.y);
+            var actualRange = range.Length != 0 ? range : new[] { Vector2Int.zero };
+
+            var minX = Mathf.Min(actualRange.Min(offset => offset.x), 0);
+            var minY = Mathf.Min(actualRange.Min(offset => offset.y), 0);
+            var maxX = Mathf.Max(actualRange.Max(offset => offset.x), 0);
+            var maxY = Mathf.Max(actualRange.Max(offset => offset.y), 0);
 
             var min = new Vector2Int(minX, minY);
             var max = new Vector2Int(maxX, maxY);
             var size = max - min + Vector2Int.one;
 
             const int spacing = 10;
+            const int maxCellSize = 100;
             var gridTransform = (RectTransform) _rangeParent.transform;
             var gridSize = gridTransform.rect.size;
             var maybeCellSizes = (gridSize - spacing * (size - Vector2Int.one)) / size;
-            var cellSize = Mathf.FloorToInt(Mathf.Min(maybeCellSizes.x, maybeCellSizes.y));
+            var cellSize = Mathf.Min(Mathf.FloorToInt(Mathf.Min(maybeCellSizes.x, maybeCellSizes.y)), maxCellSize);
 
             var neededGridSize = cellSize * size + spacing * (size - Vector2Int.one);
             var padding = gridSize - neededGridSize;
-            _rangeParent.padding.left = Mathf.FloorToInt(padding.x / 2);
-            _rangeParent.padding.bottom = Mathf.FloorToInt(padding.y / 2);
+            _rangeParent.spacing = spacing * Vector2.one ;
+            _rangeParent.padding.left = Mathf.FloorToInt(padding.y / 2);
+            _rangeParent.padding.bottom = Mathf.FloorToInt(padding.x / 2);
+            _rangeParent.cellSize = cellSize * Vector2.one;
+            _rangeParent.constraint = GridLayoutGroup.Constraint.FixedRowCount;
+            _rangeParent.constraintCount = size.x;
 
             foreach (var position in size.Iterate()) {
                 var rangePosition = position + min;

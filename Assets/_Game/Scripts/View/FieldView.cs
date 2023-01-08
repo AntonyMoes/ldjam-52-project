@@ -33,6 +33,7 @@ namespace _Game.Scripts.View {
         public void Load(Field field) {
             Clear();
             _field = field;
+            _showResources = false;
 
             var rng = new Rng(Rng.RandomSeed);
 
