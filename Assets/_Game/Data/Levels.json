@@ -74,7 +74,7 @@
       "availablePlants": [
         {
           "name": "rose",
-          "count" : 2
+          "count" : 8
         },
         {
           "name": "sunflower",
@@ -89,7 +89,7 @@
       "availablePlants": [
         {
           "name": "rose",
-          "count" : 5
+          "count" : 7
         },
         {
           "name": "landysh",
@@ -118,11 +118,11 @@
       "targetPlant": "lv9final",
       "availablePlants": [
         {
-          "name": "lilly",
+          "name": "rose",
           "count" : 5
         },
         {
-          "name": "rose",
+          "name": "lilly",
           "count" : 5
         }
       ]
