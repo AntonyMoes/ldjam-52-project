@@ -129,6 +129,14 @@
       "effect": "000"
     },
     {
+      "name": "lv12final",
+      "sprite": "TEST",
+      "displayName": "The TEST",
+      "requirements": "404",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
       "name": "lv11final",
       "sprite": "TEST",
       "displayName": "The TEST",
