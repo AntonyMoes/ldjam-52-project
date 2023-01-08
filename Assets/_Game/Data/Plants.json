@@ -50,16 +50,16 @@
     },
     {
       "name": "lv4final",
-      "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "sprite": "kabachok",
+      "displayName": "The Kabachok",
       "requirements": "131",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv5final",
-      "sprite": "kabachok",
-      "displayName": "The Kabachok",
+      "sprite": "yggdrasil",
+      "displayName": "YGGDRASIL",
       "requirements": "042",
       "range" : "o",
       "effect": "000"
@@ -69,6 +69,14 @@
       "sprite": "Palm",
       "displayName": "The Palm",
       "requirements": "340",
+      "range" : "o",
+      "effect": "000"
+    },
+    {
+      "name": "lv7final",
+      "sprite": "TEST",
+      "displayName": "The TEST",
+      "requirements": "242",
       "range" : "o",
       "effect": "000"
     }

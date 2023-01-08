@@ -8,7 +8,7 @@ namespace _Game.Scripts.UI {
         [SerializeField] private TextMeshProUGUI _label;
 
         public void Load(int index, Action<int> onClick) {
-            _label.text = index.ToString();
+            _label.text = (index + 1).ToString();
             _button.OnClick.Subscribe(() => onClick?.Invoke(index));
         }
     }

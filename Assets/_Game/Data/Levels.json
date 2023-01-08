@@ -81,6 +81,25 @@
           "count" : 1
         }
       ]
+    },
+    {
+      "name": "lvl7",
+      "field": "111,210,212\\n111,101,111\\n111,110,111",
+      "targetPlant": "lv7final",
+      "availablePlants": [
+        {
+          "name": "rose",
+          "count" : 5
+        },
+        {
+          "name": "landysh",
+          "count" : 1
+        },
+        {
+          "name": "sunflower",
+          "count" : 1
+        }
+      ]
     }
   ]
 }
