@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainMenuWindow: {fileID: 2003666603}
-  _levelSelectWindow: {fileID: 1451259421}
+  _levelSelectWindow: {fileID: 1382359867}
   _plantsPanel: {fileID: 304968581}
   _resourceShowPanel: {fileID: 1703746800}
   _levelWinPanel: {fileID: 6064727576089486439}
@@ -1138,6 +1138,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1382359867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6313300483464262731, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
+  m_PrefabInstance: {fileID: 6313300484781245014}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7503139615a4f8796eb84840b6f3bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1399801397 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8351336808723237762, guid: 693fdcb4190f60a4eb4fba98e96605d5, type: 3}
@@ -1159,17 +1170,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6313300483464262730, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
   m_PrefabInstance: {fileID: 6313300484781245014}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1451259421 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6313300483464262731, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
-  m_PrefabInstance: {fileID: 6313300484781245014}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7503139615a4f8796eb84840b6f3bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1703746799 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8539251507368634880, guid: 4a9ab6a6321d12048bacd8309a9b8eaa, type: 3}
@@ -2115,6 +2115,14 @@ PrefabInstance:
     - target: {fileID: 6313300483464262733, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
       propertyPath: m_Name
       value: LevelSelectWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313300483464262733, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313300483931454262, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
