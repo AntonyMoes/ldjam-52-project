@@ -762,17 +762,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679211366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 304968580}
-  m_RootOrder: 2
+  m_Father: {fileID: 2090996352}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 849.99994, y: -4}
-  m_SizeDelta: {x: 200, y: 608}
+  m_AnchoredPosition: {x: 24.1, y: -296.5}
+  m_SizeDelta: {x: 180, y: 608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &784246371
 GameObject:
@@ -1523,7 +1523,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1138327313561520588, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: m_text
-      value: Tap anywhere to continue
+      value: Click anywhere to continue
       objectReference: {fileID: 0}
     - target: {fileID: 1138327314871704119, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: m_Material
@@ -1642,8 +1642,7 @@ PrefabInstance:
       objectReference: {fileID: 1419709834}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _steps.Array.data[3].text
-      value: And this is the Yiggrdrasil Seed. Hover your mouse over it to learn
-        more.
+      value: And this is the Yiggdrasil Seed. Hover your mouse over it to learn more.
       objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _steps.Array.data[4].mask
@@ -1700,7 +1699,7 @@ PrefabInstance:
       objectReference: {fileID: 679211367}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _level2steps.Array.data[1].text
-      value: You can do this by growing plants from this panel
+      value: You can do this by growing plants from this panel.
       objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _level2steps.Array.data[2].mask
@@ -1999,6 +1998,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2090996351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2090996352}
+  m_Layer: 5
+  m_Name: container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2090996352
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090996351}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 679211367}
+  m_Father: {fileID: 304968580}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -230}
+  m_SizeDelta: {x: 200, y: 0}
+  m_Pivot: {x: 1, y: 1}
 --- !u!1 &2104879221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,7 +2295,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3301108151288878100, guid: 573893ee64f0e7b48a73d0fbb4c2e397, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3301108152294792448, guid: 573893ee64f0e7b48a73d0fbb4c2e397, type: 3}
       propertyPath: m_Pivot.x
@@ -2352,7 +2387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301108152294792455, guid: 573893ee64f0e7b48a73d0fbb4c2e397, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 573893ee64f0e7b48a73d0fbb4c2e397, type: 3}
