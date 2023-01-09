@@ -10,7 +10,7 @@ namespace _Game.Scripts.Data {
         [JsonProperty] private string field;
         public Dictionary<Resource, int>[][] Field { get; private set; }
         public string targetPlant;
-        public AvailablePlant[] availablePlants;
+        public List<AvailablePlant> availablePlants;
         public Dictionary<string, int> AvailablePlants { get; private set; }
 
         [Serializable]
