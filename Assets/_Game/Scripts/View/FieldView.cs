@@ -218,11 +218,37 @@ namespace _Game.Scripts.View {
             var sequence = DOTween.Sequence();
             var fullRange = range.Append(Vector2Int.zero).ToHashSet();
 
+            // AudioClip clip;
+            // var magnitudesCount = fullRange.Select(offset => offset.magnitude).ToHashSet().Count;
+            // if (fullRange.Count >= 5 && magnitudesCount >= 4) {
+            //     clip = SoundController.Instance.PlantPlace3Clip;
+            // } else if (fullRange.Count >= 3 && magnitudesCount >= 3) {
+            //     clip = SoundController.Instance.PlantPlace2Clip;
+            // } else if (fullRange.Count >= 2) {
+            //     clip = SoundController.Instance.PlantPlace1Clip;
+            // } else {
+            //     clip = null;
+            // }
+
+            // if (clip != null) {
+            //     SoundController.Instance.PlaySound(clip);
+            // }
+
+            var delays = new HashSet<float>();
             foreach (var tileView in _tileViews.Where(view => fullRange.Contains(view.Position - origin))) {
                 var multiplier = (tileView.Position - origin).magnitude;
 
                 sequence.InsertCallback(multiplier * delay, () => tileView.OnTileUpdate());
                 sequence.Insert(multiplier * delay, tileView.transform.DOPunchPosition(Vector3.up * punchHeight, punchDuration, 0, 0));
+                delays.Add(multiplier * delay);
+            }
+
+            if (delays.Count != 1) {
+                // var rng = new Rng(Rng.RandomSeed);
+                foreach (var concreteDelay in delays) {
+                    sequence.InsertCallback(concreteDelay, () =>
+                        SoundController.Instance.PlaySound(SoundController.Instance.PlantPlace1Clip));
+                }
             }
 
             sequence.AppendCallback(() => {

@@ -68,6 +68,10 @@ namespace _Game.Scripts.View {
             _plant.sprite = !mainPlant ? plant.Sprite : _initialMainSprite;
             _plant.color = _plant.color.WithAlpha(1f);
 
+            if (mainPlant) {
+                SoundController.Instance.PlaySound(SoundController.Instance.TreePlaceClip, 0.6f);
+            }
+
             HideResources();
 
             var process = _animatePlant?.Invoke(Position, plant.Range);
@@ -94,7 +98,12 @@ namespace _Game.Scripts.View {
             var initialOffset = _layerOffset * count;
             var rng = new Rng(Rng.RandomSeed);
 
+            var clip = SoundController.Instance.TreeFallClip;
+            AudioSource fallSource = null;
+
             var sequence = DOTween.Sequence();
+            sequence.AppendCallback(() => fallSource = SoundController.Instance.PlaySound(clip, 0.6f));
+
             for (var i = 0; i < count; i++) {
                 var sprite = rng.NextChoice(_mainSprites);
                 var layer = Instantiate(_layerPrefab, _layerParent);
@@ -108,6 +117,12 @@ namespace _Game.Scripts.View {
 
                 sequence.Insert(i * delay, layer.transform.DOLocalMoveY(_layerOffset * i, duration));
             }
+
+            sequence.AppendCallback(() => {
+                if (fallSource.clip == clip) {
+                    fallSource.Stop();
+                }
+            });
 
             return new TweenProcess(sequence);
         }

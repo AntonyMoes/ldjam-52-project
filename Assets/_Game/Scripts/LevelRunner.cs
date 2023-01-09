@@ -29,6 +29,7 @@ namespace _Game.Scripts {
         private PlantInfoPanel _plantInfoPanel;
         private Dictionary<Plant, int> _plants;
         private TutorialController _tutorialController;
+        private AudioSource _source;
 
         public void StartLevel(LevelData data, Action onComplete, Action<Vector2Int> focusOnBoard, TutorialController tutorialController, Action tryStartTutorial) {
             _data = data;
@@ -43,6 +44,12 @@ namespace _Game.Scripts {
             _tryStartTutorial = tryStartTutorial;
             _tutorialController = tutorialController;
             Show(tryStartTutorial);
+
+            var clip = SoundController.Instance.LevelStartClip;
+            if (_source != null && _source.clip == clip) {
+                _source.Stop();
+            }
+            _source = SoundController.Instance.PlaySound(clip, 0.4f);
         }
 
         private void Show(Action onDone = null) {

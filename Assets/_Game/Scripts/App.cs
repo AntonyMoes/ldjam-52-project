@@ -42,6 +42,7 @@ namespace _Game.Scripts {
         }
 
         private void OnWin() {
+            SoundController.Instance.PlaySound(SoundController.Instance.LevelWinClip);
             _currentRunner = null;
             Debug.LogWarning("WIIIIIN!");
 

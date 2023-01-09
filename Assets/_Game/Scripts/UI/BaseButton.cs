@@ -23,7 +23,7 @@ namespace _Game.Scripts.UI {
         }
 
         private void OnButtonClick() {
-            // TODO play sound
+            SoundController.Instance.PlaySound(SoundController.Instance.ButtonPressClip);
             _onClick();
         }
     }
