@@ -24,6 +24,8 @@ namespace _Game.Scripts.UI {
         private Action _onEndDrag;
         
         private int _count;
+        private bool _main;
+
         public int Count {
             get => _count;
             set {
@@ -37,8 +39,9 @@ namespace _Game.Scripts.UI {
             _onHover.Subscribe(OnItemHover, true);
         }
 
-        public void Load(Plant plant, int? count, Action<Plant, PointerEventData> onStartDrag, Action onStopDrag) {
+        public void Load(Plant plant, int? count, Action<Plant, PointerEventData> onStartDrag, Action onStopDrag, bool main) {
             _plant.sprite = plant.Sprite;
+            _main = main;
             Plant = plant;
 
             if (count is {} c) {
@@ -55,7 +58,7 @@ namespace _Game.Scripts.UI {
             _scaleTween?.Kill();
 
             if (hovering) {
-                _infoPanel = UIController.Instance.ShowPlantInfoPanel(Plant);
+                _infoPanel = UIController.Instance.ShowPlantInfoPanel(Plant, _main);
             } else if (_infoPanel != null) {
                 _infoPanel.TryHide();
             } else {

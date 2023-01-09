@@ -40,13 +40,14 @@ namespace _Game.Scripts.UI.PlantInfo {
         private bool _wannaHide;
         private Tween _tween;
 
-        public void Load(Plant plant) {
+        public void Load(Plant plant, bool main) {
             Clear();
             _plantName.text = plant.Name;
             
             LoadRange(plant.Range);
             _requiresGroup.Load(plant.Requirements, false);
             _affectsGroup.Load(plant.Effect, true);
+            _affectsGroup.gameObject.SetActive(!main);
         }
 
         private void LoadRange(Vector2Int[] range) {

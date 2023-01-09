@@ -53,6 +53,8 @@ namespace _Game.Scripts.View {
                 tileView.Load(_field, position, tile.sprite, AnimatePlant);
                 _tileViews.Add(tileView);
             }
+
+            ToggleResources(true);
         }
 
         public void ToggleResources(bool? show = null) {

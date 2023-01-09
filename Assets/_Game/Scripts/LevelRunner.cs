@@ -18,7 +18,7 @@ namespace _Game.Scripts {
         private Plant _targetPlant;
         private Field _field;
         private PlantsPanel _plantsPanel;
-        private ResourceShowPanel _resourceShowPanel;
+        // private ResourceShowPanel _resourceShowPanel;
         private MainMenuPanel _mainMenuPanel;
         private RestartPanel _restartPanel;
 
@@ -49,7 +49,7 @@ namespace _Game.Scripts {
             FieldView.Instance.Load(_field);
             FieldView.Instance.Show();
             _plantsPanel = UIController.Instance.ShowPlantsPanel(_plants, _targetPlant, OnDrag, OnDrop);
-            _resourceShowPanel = UIController.Instance.ShowResourceShowPanel();
+            // _resourceShowPanel = UIController.Instance.ShowResourceShowPanel();
 
             _mainMenuPanel = UIController.Instance.ShowMainMenuPanel(EndLevel);
             _restartPanel = UIController.Instance.ShowRestartPanel(Restart);
@@ -67,7 +67,7 @@ namespace _Game.Scripts {
         private void Hide(Action onDone = null) {
             // TODO add animations
             _plantsPanel.Hide();
-            _resourceShowPanel.Hide();
+            // _resourceShowPanel.Hide();
             _mainMenuPanel.Hide();
             _restartPanel.Hide();
 
@@ -163,7 +163,7 @@ namespace _Game.Scripts {
 
         private void AutoShowInfo() {
             var plantToShow = _plants.FirstOrDefault().Key ?? _targetPlant;
-            _plantInfoPanel = UIController.Instance.ShowPlantInfoPanel(plantToShow);
+            _plantInfoPanel = UIController.Instance.ShowPlantInfoPanel(plantToShow, plantToShow == _targetPlant);
             _plantInfoPanel.AutoShown = true;
         }
 

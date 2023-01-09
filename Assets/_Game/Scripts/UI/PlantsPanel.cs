@@ -25,11 +25,11 @@ namespace _Game.Scripts.UI {
         public void Load(Dictionary<Plant, int> plants, Plant targetPlant, Action<Plant, DragComponent> onDrag, Action<Plant, DragComponent, DropComponent> onDrop) {
             foreach (var (plant, count) in plants) {
                 var plantItem = Instantiate(_plantItemPrefab, _plantItemsRoot);
-                plantItem.Load(plant, count, OnStartDrag, OnStopDrag);
+                plantItem.Load(plant, count, OnStartDrag, OnStopDrag, false);
                 _plantItems.Add(plantItem);
             }
 
-            _targetPlantItem.Load(targetPlant, null, OnStartDrag, OnStopDrag);
+            _targetPlantItem.Load(targetPlant, null, OnStartDrag, OnStopDrag, true);
 
             _onDrag = onDrag;
             _onDrop = onDrop;

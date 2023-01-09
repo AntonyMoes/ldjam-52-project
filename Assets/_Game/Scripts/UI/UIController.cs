@@ -65,8 +65,8 @@ namespace _Game.Scripts.UI {
             return _restartPanel;
         }
 
-        public PlantInfoPanel ShowPlantInfoPanel(Plant plant) {
-            _plantInfoPanel.Load(plant);
+        public PlantInfoPanel ShowPlantInfoPanel(Plant plant, bool main) {
+            _plantInfoPanel.Load(plant, main);
             _plantInfoPanel.Show();
             return _plantInfoPanel;
         }

@@ -339,9 +339,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 52811e98068e28241b591b5860a236d0, type: 2}
   - {fileID: 11400000, guid: e2b8928dc20a8394284cf0006443b0d2, type: 2}
   - {fileID: 11400000, guid: b5f16a84c8bd3814c9ee3bb10d57f032, type: 2}
-  - {fileID: 11400000, guid: f54513a8869931046b71a2f9aff26312, type: 2}
   - {fileID: 11400000, guid: 271aa299ad0f23b40a5980bba674ff8a, type: 2}
-  - {fileID: 11400000, guid: 4997a8186377e16488e230b619ca0135, type: 2}
   _availableMap: {fileID: 2055831707}
   _affectedMap: {fileID: 490733606}
   _availableTile: {fileID: 11400000, guid: 15054e57b62bf754ba2dea8e0f23f7d1, type: 2}
