@@ -1,14 +1,16 @@
 ﻿using System;
 using DG.Tweening;
-using GeneralUtils.UI;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace _Game.Scripts.UI {
     public class MainMenuWindow : GameUIElement {
         [SerializeField] private CanvasGroup _contents;
         [SerializeField] private BaseButton _levelSelectButton;
         [SerializeField] private BaseButton _settingsButton;
+        [SerializeField] private RectTransform _center;
+        [SerializeField] private RectTransform _emptySpaceCenter;
+
+        public Vector2 EmptySpaceOffset => (_emptySpaceCenter.localPosition - _center.localPosition) / ((RectTransform) transform).rect.size;
 
         private Action<int> _startLevel;
         private Tween _tween;

@@ -1,6 +1,5 @@
 ﻿using System;
 using DG.Tweening;
-using GeneralUtils.UI;
 using UnityEngine;
 
 namespace _Game.Scripts.UI {

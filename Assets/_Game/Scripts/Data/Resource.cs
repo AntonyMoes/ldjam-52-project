@@ -59,5 +59,15 @@ namespace _Game.Scripts.Data {
         public static string Serialize(this IDictionary<Resource, int> resources) {
             return string.Join(";", resources.Select(pair => $"{pair.Key}:{pair.Value}"));
         }
+
+        public static Dictionary<Resource, int>[][] CreateFake(Vector2Int size) {
+            return Enumerable
+                .Range(0, size.x)
+                .Select(_ => Enumerable
+                    .Range(0, size.y)
+                    .Select(_ => Resources.ToDictionary(r => r, r => 0))
+                    .ToArray())
+                .ToArray();
+        }
     }
 }

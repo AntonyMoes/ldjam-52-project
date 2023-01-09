@@ -34,7 +34,7 @@ namespace _Game.Scripts.View {
             return _initialPosition + new Vector3Int(position.y, position.x, 0);
         }
 
-        public void Load(Field field) {
+        public void Load(Field field, bool showResources = true) {
             Clear();
 
             _field = field;
@@ -54,7 +54,7 @@ namespace _Game.Scripts.View {
                 _tileViews.Add(tileView);
             }
 
-            ToggleResources(true);
+            ToggleResources(showResources);
         }
 
         public void ToggleResources(bool? show = null) {
@@ -126,7 +126,7 @@ namespace _Game.Scripts.View {
 
         // ------------------------------ ANIMATIONS ------------------------------ //
 
-        public void Show() {
+        public void Show(Action onDone = null) {
             _tilemapRenderer.enabled = false;
             foreach (var tileView in _tileViews) {
                 tileView.ToggleTempTile(true);
@@ -159,6 +159,7 @@ namespace _Game.Scripts.View {
                 }
 
                 _tilemapRenderer.enabled = true;
+                onDone?.Invoke();
             });
 
             _tween = sequence;
@@ -243,7 +244,7 @@ namespace _Game.Scripts.View {
                 delays.Add(multiplier * delay);
             }
 
-            if (delays.Count != 1) {
+            if (!_field.Fake) {
                 // var rng = new Rng(Rng.RandomSeed);
                 foreach (var concreteDelay in delays) {
                     sequence.InsertCallback(concreteDelay, () =>
@@ -262,5 +263,7 @@ namespace _Game.Scripts.View {
             _tween = sequence;
             return new TweenProcess(_tween);
         }
+
+        public TileView At(Vector2Int position) => _tileViews.FirstOrDefault(view => view.Position == position);
     }
 }

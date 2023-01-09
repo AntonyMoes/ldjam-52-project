@@ -5,20 +5,13 @@ using UnityEngine;
 
 namespace _Game.Scripts.Model {
     public class Field {
+        public readonly bool Fake;
         private readonly FieldTile[][] _field;
 
         public Vector2Int Size => new Vector2Int(_field.Length, _field[0].Length);
 
-        // public IEnumerable<Vector2Int> Iterate() {
-        //     return Enumerable
-        //         .Range(0, Size.x)
-        //         .Select(row => Enumerable
-        //             .Range(0, Size.y)
-        //             .Select(column => new Vector2Int(row, column)))
-        //         .SelectMany(pos => pos);
-        // }
-
-        public Field(Dictionary<Resource, int>[][] fieldData) {
+        public Field(Dictionary<Resource, int>[][] fieldData, bool fake = false) {
+            Fake = fake;
             _field = fieldData
                 .Select(row => row
                     .Select(resourceData => new FieldTile(resourceData))
@@ -28,7 +21,9 @@ namespace _Game.Scripts.Model {
 
         public bool CanPlantAt(Plant plant, Vector2Int position) {
             return GetAt(position) is { HasPlant: false } tile 
-                   && tile.Resources.CombineWith(plant.Requirements, false).Values.All(count => count >= 0);
+                   && (Fake
+                       || !tile.HasPlant
+                       && tile.Resources.CombineWith(plant.Requirements, false).Values.All(count => count >= 0));
         }
 
         public bool PlantAt(Plant plant, Vector2Int position) {

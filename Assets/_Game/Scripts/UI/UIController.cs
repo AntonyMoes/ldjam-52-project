@@ -6,6 +6,7 @@ using _Game.Scripts.UI.PlantInfo;
 using GeneralUtils;
 using GeneralUtils.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _Game.Scripts.UI {
     public class UIController : SingletonBehaviour<UIController> {

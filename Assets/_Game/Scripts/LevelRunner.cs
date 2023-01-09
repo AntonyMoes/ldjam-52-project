@@ -80,9 +80,8 @@ namespace _Game.Scripts {
 
             FieldView.Instance.Hide(() => {
                 FieldView.Instance.Clear();
+                onDone?.Invoke();
             });
-            
-            onDone?.Invoke();
         }
 
         private void Restart() {
