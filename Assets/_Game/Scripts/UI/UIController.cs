@@ -11,6 +11,7 @@ namespace _Game.Scripts.UI {
     public class UIController : SingletonBehaviour<UIController> {
         [SerializeField] private MainMenuWindow _mainMenuWindow;
         [SerializeField] private LevelSelectWindow _levelSelectWindow;
+        [SerializeField] private CreditsWindow _creditsWindow;
         [SerializeField] private PlantsPanel _plantsPanel;
         [SerializeField] private ResourceShowPanel _resourceShowPanel;
         [SerializeField] private LevelWinPanel _levelWinPanel;
@@ -34,6 +35,11 @@ namespace _Game.Scripts.UI {
             _levelSelectWindow.Load(startLevel);
             _levelSelectWindow.Show();
             return _levelSelectWindow;
+        }
+
+        public CreditsWindow ShowCreditsWindow() {
+            _creditsWindow.Show();
+            return _creditsWindow;
         }
 
         public PlantsPanel ShowPlantsPanel(Dictionary<Plant, int> plants, Plant targetPlant, Action<Plant, DragComponent> onDrag, Action<Plant, DragComponent, DropComponent> onDrop) {

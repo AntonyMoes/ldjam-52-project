@@ -1,33 +1,20 @@
 ﻿using System;
 using DG.Tweening;
-using GeneralUtils.UI;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace _Game.Scripts.UI {
-    public class MainMenuWindow : GameUIElement {
+    public class CreditsWindow : GameUIElement {
         [SerializeField] private CanvasGroup _contents;
-        [SerializeField] private BaseButton _levelSelectButton;
-        [SerializeField] private BaseButton _settingsButton;
+        [SerializeField] private BaseButton _backButton;
 
-        private Action<int> _startLevel;
         private Tween _tween;
 
         protected override void Init() {
-            _levelSelectButton.OnClick.Subscribe(OnLevelSelectClick);
-            _settingsButton.OnClick.Subscribe(OnSettingsClick);
+            _backButton.OnClick.Subscribe(OnBackClick);
         }
 
-        public void Load(Action<int> startLevel) {
-            _startLevel = startLevel;
-        }
-
-        private void OnLevelSelectClick() {
-            Hide(() => UIController.Instance.ShowLevelSelectWindow(_startLevel));
-        }
-
-        private void OnSettingsClick() {
-            Hide(() => UIController.Instance.ShowCreditsWindow());
+        private void OnBackClick() {
+            Hide(() => UIController.Instance.ShowMainMenuWindow());
         }
 
         protected override void PerformShow(Action onDone = null) {
