@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using DG.Tweening;
-using GeneralUtils.UI;
 using UnityEngine;
 
 namespace _Game.Scripts.UI {
-    public class LevelSelectWindow : UIElement {
+    public class LevelSelectWindow : GameUIElement {
         [SerializeField] private CanvasGroup _contents;
         [SerializeField] private Transform _levelItemsParent;
         [SerializeField] private LevelItem _levelItemPrefab;

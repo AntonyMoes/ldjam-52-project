@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace _Game.Scripts.UI {
-    public class MainMenuWindow : UIElement {
+    public class MainMenuWindow : GameUIElement {
         [SerializeField] private CanvasGroup _contents;
         [SerializeField] private BaseButton _levelSelectButton;
         [SerializeField] private BaseButton _settingsButton;

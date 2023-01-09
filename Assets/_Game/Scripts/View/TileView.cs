@@ -93,7 +93,7 @@ namespace _Game.Scripts.View {
             const float delay = 0.05f;
             const float maxColorOffset = 0.1f;
 
-            var count = 30;  // TODO
+            var count = Mathf.CeilToInt(Camera.main.orthographicSize * 2 * 0.75f / _layerOffset);
 
             var initialOffset = _layerOffset * count;
             var rng = new Rng(Rng.RandomSeed);

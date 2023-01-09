@@ -32,7 +32,7 @@ RectTransform:
   - {fileID: 6064727577288932666}
   - {fileID: 4260157176057638024}
   m_Father: {fileID: 6064727576124252180}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6253275121305823129}
   - component: {fileID: 5963135591425716331}
   m_Layer: 5
-  m_Name: Border
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,17 +102,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4036848483409632916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6727047130359795661}
+  m_Father: {fileID: 6064727576124252180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: 0}
-  m_SizeDelta: {x: -31, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -2, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6253275121305823129
 CanvasRenderer:
@@ -260,7 +260,7 @@ RectTransform:
   m_Children:
   - {fileID: 6064727577508030999}
   m_Father: {fileID: 6064727576124252180}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -389,6 +389,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 6797348290239526360}
   - {fileID: 6727047130359795661}
   - {fileID: 2126369557769913164}
   - {fileID: 6064727575778552477}
@@ -434,7 +435,7 @@ RectTransform:
   m_Children:
   - {fileID: 6064727576299217839}
   m_Father: {fileID: 6064727576124252180}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -719,6 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7574debfdb46f28880a01ff987180e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _contents: {fileID: 0}
   _levelSelectButton: {fileID: 6064727575778552465}
   _settingsButton: {fileID: 6064727576189059851}
 --- !u!1 &6064727577288932665
@@ -1001,7 +1003,7 @@ GameObject:
   - component: {fileID: 5666292297006429062}
   - component: {fileID: 2587419285479373302}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1017,15 +1019,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6797348290239526360}
+  m_Children: []
   m_Father: {fileID: 6064727576124252180}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5666292297006429062
 CanvasRenderer:

@@ -20,7 +20,7 @@ namespace _Game.Scripts {
 
 #if UNITY_EDITOR
             PlayerPrefs.DeleteAll();
-            SaveManager.SetInt(SaveManager.IntData.CompletedLevels, 300);
+            SaveManager.SetInt(SaveManager.IntData.CompletedLevels, 10);
 #endif
         }
 

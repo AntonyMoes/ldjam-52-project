@@ -10,8 +10,8 @@ namespace _Game.Scripts.UI {
         public readonly GeneralUtils.Event OnClick;
 
         public bool Enabled {
-            get => _button.enabled;
-            set => _button.enabled = value;
+            get => _button.interactable;
+            set => _button.interactable = value;
         }
 
         public BaseButton() {
