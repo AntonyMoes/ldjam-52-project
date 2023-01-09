@@ -1,4 +1,5 @@
-﻿using _Game.Scripts.UI;
+﻿using DG.Tweening;
+using _Game.Scripts.UI;
 using _Game.Scripts.View;
 using UnityEngine;
 
@@ -15,8 +16,8 @@ namespace _Game.Scripts {
             ArtStorage.Instance.Init();
 
             UIController.Instance.ShowMainMenuWindow(StartLevel);
-            
-            SoundController.Instance.PlayMusic(SoundController.Instance.SoundTrackClip, 0.4f);
+
+            SoundController.Instance.PlayMusic(SoundController.Instance.SoundTrackClip, 0.1f).DOFade(0.2f, 2f);
 
 #if UNITY_EDITOR
             PlayerPrefs.DeleteAll();

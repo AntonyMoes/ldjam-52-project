@@ -236,19 +236,20 @@ namespace _Game.Scripts.View {
 
             var delays = new HashSet<float>();
             foreach (var tileView in _tileViews.Where(view => fullRange.Contains(view.Position - origin))) {
-                var multiplier = (tileView.Position - origin).magnitude;
+                var diffVector = (tileView.Position - origin);
+                var multiplier = Mathf.Abs(diffVector.x) + Mathf.Abs(diffVector.y);
 
                 sequence.InsertCallback(multiplier * delay, () => tileView.OnTileUpdate());
                 sequence.Insert(multiplier * delay, tileView.transform.DOPunchPosition(Vector3.up * punchHeight, punchDuration, 0, 0));
                 delays.Add(multiplier * delay);
             }
 
-            if (delays.Count != 1) {
-                // var rng = new Rng(Rng.RandomSeed);
-                foreach (var concreteDelay in delays) {
-                    sequence.InsertCallback(concreteDelay, () =>
-                        SoundController.Instance.PlaySound(SoundController.Instance.PlantPlace1Clip));
-                }
+
+            foreach (var concreteDelay in delays) {
+                sequence.InsertCallback(concreteDelay, () => {
+                    var pitch = 1f + (concreteDelay / delay - 1) * 0.05f;
+                    SoundController.Instance.PlaySound(SoundController.Instance.PlantPlace1Clip, volume: 0.5f, pitch: pitch);
+                });
             }
 
             sequence.AppendCallback(() => {
