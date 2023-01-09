@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4655243210001453123}
   - component: {fileID: 1790914908092212217}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,15 +103,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1249325778345840789}
-  m_Father: {fileID: 6313300484111560604}
+  m_Children: []
+  m_Father: {fileID: 1249325778345840789}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4655243210001453123
 CanvasRenderer:
@@ -163,7 +162,7 @@ GameObject:
   - component: {fileID: 4080477443222853027}
   - component: {fileID: 2866397336882683685}
   m_Layer: 5
-  m_Name: Border
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,17 +175,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5962245800554404203}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8611889310992478091}
+  m_Children:
+  - {fileID: 8611889310992478091}
+  m_Father: {fileID: 6313300484111560604}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: 0}
-  m_SizeDelta: {x: -31, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -2, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4080477443222853027
 CanvasRenderer:
@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7503139615a4f8796eb84840b6f3bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _contents: {fileID: 0}
   _levelItemsParent: {fileID: 6313300483931454262}
   _levelItemPrefab: {fileID: 1653597059339785567, guid: 4843a90b35a53f447a485e54fa3c298a, type: 3}
   _backButton: {fileID: 6313300483833724906}
@@ -671,7 +672,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8611889310992478091}
+  - {fileID: 1249325778345840789}
   - {fileID: 7977656042355948541}
   - {fileID: 6313300483931454262}
   m_Father: {fileID: 6313300483464262730}
