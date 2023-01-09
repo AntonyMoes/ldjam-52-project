@@ -15,6 +15,8 @@ namespace _Game.Scripts {
             ArtStorage.Instance.Init();
 
             UIController.Instance.ShowMainMenuWindow(StartLevel);
+            
+            SoundController.Instance.PlayMusic(SoundController.Instance.SoundTrackClip, 0.4f);
 
 #if UNITY_EDITOR
             PlayerPrefs.DeleteAll();
