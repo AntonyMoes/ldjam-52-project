@@ -132,7 +132,7 @@
       "name": "lv12final",
       "sprite": "yggdrasil",
       "displayName": "YGGDRASIL",
-      "requirements": "404",
+      "requirements": "411",
       "range" : "o",
       "effect": "000"
     },

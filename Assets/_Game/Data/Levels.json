@@ -154,11 +154,11 @@
     },
     {
       "name": "lvl12",
-      "field": "133,133,133\\n133,133,133\\n133,133,133",
+      "field": "131,131,131\\n131,131,131\\n131,131,131",
       "targetPlant": "lv12final",
       "availablePlants": [
         {
-          "name": "rose",
+          "name": "lilly",
           "count" : 4
         },
         {
