@@ -771,9 +771,26 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.1, y: -296.5}
+  m_AnchoredPosition: {x: 24.099998, y: -296.5}
   m_SizeDelta: {x: 180, y: 608}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &762403874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6313300484111560607, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
+  m_PrefabInstance: {fileID: 6313300484781245014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &762403876
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762403874}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &784246371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,6 +1075,23 @@ Transform:
   m_Father: {fileID: 283115466}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0.895, z: 0}
+--- !u!1 &967007169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6064727576124252179, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+  m_PrefabInstance: {fileID: 6064727576353139000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &967007171
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967007169}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1119925962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,6 +1139,23 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 495658765927637501, guid: 49bce973b6128d842aa747211037711d, type: 3}
   m_PrefabInstance: {fileID: 3795199728234620347}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1207969675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8351336810420782161, guid: 693fdcb4190f60a4eb4fba98e96605d5, type: 3}
+  m_PrefabInstance: {fileID: 8351336810021424567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1207969676
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207969675}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1228939717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,10 +1674,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _steps.Array.data[0].text
-      value: 'Let''s embark on a great adventure to grow the great tree of Yiggdrasil!
+      value: 'Let''s embark on a great adventure to grow the great tree of Yggdrasil!
 
         But
-        first we should get familiar with this interface.'
+        first we should get familiar with the interface.'
       objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _steps.Array.data[1].mask
@@ -1642,12 +1693,19 @@ PrefabInstance:
       objectReference: {fileID: 1419709834}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _steps.Array.data[3].text
-      value: And this is the Yiggdrasil Seed. Hover your mouse over it to learn more.
+      value: And this is the Yggdrasil Seed. Hover your mouse over it to learn more.
       objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _steps.Array.data[4].mask
       value: 
       objectReference: {fileID: 1425373005}
+    - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
+      propertyPath: _steps.Array.data[4].text
+      value: 'Plants need resources to grow, and here we can see them.
+
+        The
+        seed will require different resources at each level.'
+      objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _steps.Array.data[5].mask
       value: 
@@ -1699,7 +1757,7 @@ PrefabInstance:
       objectReference: {fileID: 679211367}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _level2steps.Array.data[1].text
-      value: You can do this by growing plants from this panel.
+      value: You can do it by planting flowers from this panel.
       objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _level2steps.Array.data[2].mask
@@ -1707,8 +1765,7 @@ PrefabInstance:
       objectReference: {fileID: 492703715}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _level2steps.Array.data[2].text
-      value: This panel also shows which other tiles this plant affects and in what
-        way.
+      value: This pannel also shows which other tiles the flower affects and how.
       objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _level2steps.Array.data[3].mask
@@ -1716,7 +1773,7 @@ PrefabInstance:
       objectReference: {fileID: 1875856291}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _level2steps.Array.data[3].text
-      value: Affected tiles are also shown on the field when you drag a plant over
+      value: Affected tiles are highlighed  on the field when you drag a plant over
         it.
       objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
@@ -1725,7 +1782,10 @@ PrefabInstance:
       objectReference: {fileID: 1875856291}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _level2steps.Array.data[4].text
-      value: Try to grow additional plants so the Yggdrasil can be planted!
+      value: 'Try to grow some flowers to modify the soil.
+
+        Remember! The
+        Seed is very picky!'
       objectReference: {fileID: 0}
     - target: {fileID: 1138327315010698147, guid: aa0c5580c8a54168a76913442f4a885e, type: 3}
       propertyPath: _level2steps.Array.data[1].action
@@ -2387,7 +2447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301108152294792455, guid: 573893ee64f0e7b48a73d0fbb4c2e397, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 573893ee64f0e7b48a73d0fbb4c2e397, type: 3}
@@ -2515,6 +2575,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1228939718}
     m_Modifications:
+    - target: {fileID: 2126369557769913164, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126369557769913164, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126369557769913164, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064727575778552477, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064727575778552477, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064727575778552477, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -490
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064727576124252180, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064727576189059863, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064727576189059863, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064727576189059863, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -665
+      objectReference: {fileID: 0}
     - target: {fileID: 6064727576745013137, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
       propertyPath: m_Name
       value: MainMenuWindow
@@ -2607,6 +2707,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6064727576745013139, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
+      propertyPath: _contents
+      value: 
+      objectReference: {fileID: 967007171}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b660a754e6665446bf6a481ecb1afd4, type: 3}
 --- !u!1001 &6313300484781245014
@@ -2700,6 +2804,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6313300483464262731, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
+      propertyPath: _contents
+      value: 
+      objectReference: {fileID: 762403876}
     - target: {fileID: 6313300483464262733, guid: cddc3a393650d544ba4edf8fcec7d0c6, type: 3}
       propertyPath: m_Name
       value: LevelSelectWindow
@@ -2721,6 +2829,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 215032966}
     m_Modifications:
+    - target: {fileID: 8351336808723237761, guid: 693fdcb4190f60a4eb4fba98e96605d5, type: 3}
+      propertyPath: _contents
+      value: 
+      objectReference: {fileID: 1207969676}
     - target: {fileID: 8351336808723237762, guid: 693fdcb4190f60a4eb4fba98e96605d5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using _Game.Scripts.Model;
+using DG.Tweening;
 using GeneralUtils.UI;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _Game.Scripts.UI.PlantInfo {
     public class PlantInfoPanel : UIElement {
+        [SerializeField] private CanvasGroup _contents;
+
         [SerializeField] private TextMeshProUGUI _plantName;
 
         [SerializeField] private GridLayoutGroup _rangeParent;
@@ -36,6 +38,7 @@ namespace _Game.Scripts.UI.PlantInfo {
         }
 
         private bool _wannaHide;
+        private Tween _tween;
 
         public void Load(Plant plant) {
             Clear();
@@ -92,22 +95,12 @@ namespace _Game.Scripts.UI.PlantInfo {
             }
         }
 
-        protected override void PerformShow(Action onDone = null) {
-            _wannaHide = false;
-            base.PerformShow(onDone);
-        }
-
         public void TryHide() {
             if (AutoShown) {
                 _wannaHide = true;
             } else {
                 Hide();
             }
-        }
-
-        protected override void PerformHide(Action onDone = null) {
-            _wannaHide = false;
-            base.PerformHide(onDone);
         }
 
         public override void Clear() {
@@ -119,6 +112,44 @@ namespace _Game.Scripts.UI.PlantInfo {
             }
 
             _rangeItems.Clear();
+        }
+
+        protected override void PerformShow(Action onDone = null) {
+            _wannaHide = false;
+
+            var alpha = _contents.alpha;
+            _tween?.Kill();
+
+            const float duration = 0.15f;
+            const float endAlpha = 1f;
+
+            var remainingDuration = duration * (endAlpha - alpha);
+            _contents.alpha = alpha;
+
+            _tween = DOTween.Sequence() 
+                .Insert(0f, _contents.DOFade(endAlpha, remainingDuration))
+                .AppendCallback(() => {
+                    onDone?.Invoke();
+                });
+        }
+
+        protected override void PerformHide(Action onDone = null) {
+            _wannaHide = false;
+
+            var alpha = _contents.alpha;
+            _tween?.Kill();
+
+            const float duration = 0.15f;
+            const float endAlpha = 0f;
+
+            var remainingDuration = duration * alpha;
+            _contents.alpha = alpha;
+
+            _tween = DOTween.Sequence()
+                .Insert(0f, _contents.DOFade(endAlpha, remainingDuration))
+                .AppendCallback(() => {
+                    onDone?.Invoke();
+                });
         }
     }
 }
