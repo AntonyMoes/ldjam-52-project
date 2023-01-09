@@ -86,12 +86,13 @@ namespace _Game.Scripts {
                 return;
             }
 
-            if (tileView.PlantAt(plant, out var plantProcess)) {
+            var isTargetPlant = plant == _targetPlant;
+            if (tileView.PlantAt(plant, out var plantProcess, isTargetPlant)) {
                 _plantsPanel.OnPlanted(plant);
                 Debug.LogWarning($"PLANTED AT {tileView.Position}");
 
                 plantProcess.Run(() => {
-                    if (plant == _targetPlant) {
+                    if (isTargetPlant) {
                         OnLevelWon();
                     }
                 });
@@ -115,7 +116,7 @@ namespace _Game.Scripts {
                 fieldView.HideAffectedTiles();
                 _currentTile = currentTile;
                 if (_currentTile != null && _currentTile.CanPlant(plant)) {
-                    _currentTile.PreviewPlant(plant);
+                    _currentTile.PreviewPlant(plant, plant == _targetPlant);
                     fieldView.ShowAffectedTiles(plant, _currentTile);
                 }
             } else if (_currentTile != null) {

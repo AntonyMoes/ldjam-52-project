@@ -404,6 +404,24 @@ MonoBehaviour:
   _plant: {fileID: 6491443764521454764}
   _tempTile: {fileID: 1351130078191458296}
   _group: {fileID: 8291638622422934015}
+  _initialMainSprite: {fileID: 21300000, guid: 5acdec909ddd05146a792646e4843a6b, type: 3}
+  _mainSprites:
+  - {fileID: 21300000, guid: 5acdec909ddd05146a792646e4843a6b, type: 3}
+  - {fileID: 21300000, guid: cef46ea2530291147b54f00d04c4d3c6, type: 3}
+  - {fileID: 21300000, guid: 13bb9ce42dc237c41bd87c82b34e267c, type: 3}
+  - {fileID: 21300000, guid: 91957ba97b593bb409363877e65c6523, type: 3}
+  - {fileID: 21300000, guid: 55f01ebe5e6690b439328d05eb8b1c2e, type: 3}
+  - {fileID: 21300000, guid: 4ce78a8b1c11954458542acbf83e92f9, type: 3}
+  - {fileID: 21300000, guid: 3e9f97bebeebd87438d2a580cf5c29c3, type: 3}
+  - {fileID: 21300000, guid: b724e685aa15d3a4095d12985ba3e71f, type: 3}
+  - {fileID: 21300000, guid: 7631b534290ac994497f1152bffefc18, type: 3}
+  - {fileID: 21300000, guid: a37b9813d68806244b4e6cff7ca7b0d6, type: 3}
+  - {fileID: 21300000, guid: e9e7c3393a3bdf541aaae862551b9160, type: 3}
+  - {fileID: 21300000, guid: d00bf3ba316f08c479c4dc2141540934, type: 3}
+  - {fileID: 21300000, guid: 79e6556cf63b4fe43a63fa7b277c78c2, type: 3}
+  _layerPrefab: {fileID: 2418254565376145818, guid: e33dd6569c6ca1241941fbe165986b33, type: 3}
+  _layerParent: {fileID: 5736455970838905128}
+  _layerOffset: 0.25
 --- !u!1 &7690302617391413435
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +498,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.19, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
