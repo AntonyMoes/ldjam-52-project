@@ -103,6 +103,10 @@ namespace _Game.Scripts {
         }
 
         private void PlayIdleAnimation() {
+            if (_playingIdleAnimation) {
+                return;
+            }
+
             _playingIdleAnimation = true;
 
             const int maxSize = 4;
@@ -148,7 +152,10 @@ namespace _Game.Scripts {
                             _onAnimationCancelled();
                             return;
                         }
-                        Pause(PlayIdleAnimation);
+                        Pause(() => {
+                            _playingIdleAnimation = false;
+                            PlayIdleAnimation();
+                        });
                     });
                     return;
                 }
