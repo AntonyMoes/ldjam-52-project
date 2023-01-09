@@ -3,7 +3,7 @@
     {
       "name": "rose",
       "sprite": "rose",
-      "displayName": "La Rose",
+      "displayName": "Rose",
       "requirements": "111",
       "range" : " ,x, \nx,o,x\n ,x, ",
       "effect": "101"
@@ -11,7 +11,7 @@
     {
       "name": "landysh",
       "sprite": "landish",
-      "displayName": "La Landysh",
+      "displayName": "Lily of the Valley",
       "requirements": "311",
       "range" : "x,x\nx, \no, ",
       "effect": "010"
@@ -19,7 +19,7 @@
     {
       "name": "sunflower",
       "sprite": "sunflower",
-      "displayName": "La Sunflower",
+      "displayName": "Sunflower",
       "requirements": "222",
       "range" : "x,x,x\nx,o,x\nx,x,x",
       "effect": "04-4"
@@ -27,7 +27,7 @@
     {
       "name": "lilly",
       "sprite": "lilly",
-      "displayName": "La Lilly",
+      "displayName": "Lilly",
       "requirements": "022",
       "range" : " , ,x, , \n , , , , \nx, ,o, ,x\n , , , , \n , ,x, , ",
       "effect": "2-1-1"
@@ -35,7 +35,7 @@
     {
       "name": "violet",
       "sprite": "violet",
-      "displayName": "La Violet",
+      "displayName": "Violet",
       "requirements": "131",
       "range" : "x, ,x\n ,o, \nx, ,x",
       "effect": "-202"
@@ -43,7 +43,7 @@
     {
       "name": "tulip",
       "sprite": "tulip",
-      "displayName": "La Tulip",
+      "displayName": "Tulip",
       "requirements": "001",
       "range" : "x, ,x\nx, ,x\nx,o,x",
       "effect": "1-10"
@@ -51,7 +51,7 @@
     {
       "name": "lv1final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "211",
       "range" : "o",
       "effect": "000"
@@ -59,7 +59,7 @@
     {
       "name": "lv2final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "400",
       "range" : "o",
       "effect": "000"
@@ -67,7 +67,7 @@
     {
       "name": "lv3final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "121",
       "range" : "o",
       "effect": "000"
@@ -75,7 +75,7 @@
     {
       "name": "lv4final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "131",
       "range" : "o",
       "effect": "000"
@@ -83,7 +83,7 @@
     {
       "name": "lv5final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "042",
       "range" : "o",
       "effect": "000"
@@ -91,7 +91,7 @@
     {
       "name": "lv6final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "340",
       "range" : "o",
       "effect": "000"
@@ -99,7 +99,7 @@
     {
       "name": "lv7final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "242",
       "range" : "o",
       "effect": "000"
@@ -107,7 +107,7 @@
     {
       "name": "lv8final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "400",
       "range" : "o",
       "effect": "000"
@@ -115,7 +115,7 @@
     {
       "name": "lv9final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "414",
       "range" : "o",
       "effect": "000"
@@ -123,7 +123,7 @@
     {
       "name": "lv10final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "333",
       "range" : "o",
       "effect": "000"
@@ -131,23 +131,23 @@
     {
       "name": "lv12final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
-      "requirements": "404",
+      "displayName": "Yggdrasil",
+      "requirements": "411",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv11final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
-      "requirements": "424",
+      "displayName": "Yggdrasil",
+      "requirements": "444",
       "range" : "o",
       "effect": "000"
     },
     {
       "name": "lv13final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "404",
       "range" : "o",
       "effect": "000"
@@ -155,7 +155,7 @@
     {
       "name": "lv14final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "044",
       "range" : "o",
       "effect": "000"
@@ -163,7 +163,7 @@
     {
       "name": "lv15final",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "111",
       "range" : "o",
       "effect": "000"
@@ -171,7 +171,7 @@
     {
       "name": "lvXfinal",
       "sprite": "yggdrasil",
-      "displayName": "YGGDRASIL",
+      "displayName": "Yggdrasil",
       "requirements": "000",
       "range" : "o",
       "effect": "000"
