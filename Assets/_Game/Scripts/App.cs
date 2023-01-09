@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using _Game.Scripts.Data;
 using _Game.Scripts.Model;
@@ -29,7 +29,7 @@ namespace _Game.Scripts {
             _mainMenuWindow = UIController.Instance.ShowMainMenuWindow(WaitToStartLevel);
             _mainMenuWindow.OnShown.Subscribe(PlayIdleAnimation);
 
-            SoundController.Instance.PlayMusic(SoundController.Instance.SoundTrackClip, 0f).DOFade(0.2f, 2f);
+            SoundController.Instance.PlayMusic(SoundController.Instance.SoundTrackClip, 0.1f).DOFade(0.2f, 2f);
 
 #if UNITY_EDITOR
             PlayerPrefs.DeleteAll();

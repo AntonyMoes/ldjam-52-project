@@ -69,7 +69,7 @@ namespace _Game.Scripts.View {
             _plant.color = _plant.color.WithAlpha(1f);
 
             if (mainPlant) {
-                SoundController.Instance.PlaySound(SoundController.Instance.TreePlaceClip, 0.6f);
+                SoundController.Instance.PlaySound(SoundController.Instance.TreePlaceClip, 0.5f);
             }
 
             HideResources();
@@ -102,7 +102,8 @@ namespace _Game.Scripts.View {
             AudioSource fallSource = null;
 
             var sequence = DOTween.Sequence();
-            sequence.AppendCallback(() => fallSource = SoundController.Instance.PlaySound(clip, 0.6f));
+            sequence.AppendCallback(() => fallSource = SoundController.Instance.PlaySound(clip, 0.5f));
+            sequence.AppendCallback(() => fallSource.DOFade(0, 2.5f));
 
             for (var i = 0; i < count; i++) {
                 var sprite = rng.NextChoice(_mainSprites);
