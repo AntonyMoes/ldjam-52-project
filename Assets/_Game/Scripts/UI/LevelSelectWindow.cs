@@ -22,9 +22,11 @@ namespace _Game.Scripts.UI {
 
         protected override void PerformShow(Action onDone = null) {
             var levels = DataStorage.Instance.Levels;
+            var completedLevels = SaveManager.GetInt(SaveManager.IntData.CompletedLevels);
+
             for (var i = 0; i < levels.Length; i++) {
                 var item = Instantiate(_levelItemPrefab, _levelItemsParent);
-                item.Load(i, OnItemClick);
+                item.Load(i, OnItemClick, i <= completedLevels);
                 _levelItems.Add(item);
             }
 

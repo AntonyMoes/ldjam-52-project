@@ -21,9 +21,13 @@ namespace _Game.Scripts.UI {
         }
 
         private void Update() {
-            if (State == EState.Shown && Input.GetKeyDown(KeyCode.R)) {
+            if (State == EState.Shown && Input.GetKeyDown(KeyCode.R) && _button.Enabled) {
                 OnButtonClick();
             }
+        }
+
+        public void SetButtons(bool enabled) {
+            _button.Enabled = enabled;
         }
     }
 }

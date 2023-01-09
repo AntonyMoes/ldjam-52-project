@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using _Game.Scripts.Model;
 using GeneralUtils.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _Game.Scripts.UI.PlantInfo {
@@ -17,6 +19,23 @@ namespace _Game.Scripts.UI.PlantInfo {
         [SerializeField] private PlantInfoResourceGroup _affectsGroup;
 
         private readonly List<PlantInfoRangeItem> _rangeItems = new List<PlantInfoRangeItem>();
+
+        // shit
+        private bool _autoShown;
+
+        public bool AutoShown {
+            get => _autoShown;
+            set {
+                _autoShown = value;
+                if (_autoShown) {
+                    _wannaHide = true;
+                } if (_autoShown == false && _wannaHide) {
+                    Hide();
+                }
+            }
+        }
+
+        private bool _wannaHide;
 
         public void Load(Plant plant) {
             Clear();
@@ -71,6 +90,24 @@ namespace _Game.Scripts.UI.PlantInfo {
                 rangeItem.Load(state);
                 _rangeItems.Add(rangeItem);
             }
+        }
+
+        protected override void PerformShow(Action onDone = null) {
+            _wannaHide = false;
+            base.PerformShow(onDone);
+        }
+
+        public void TryHide() {
+            if (AutoShown) {
+                _wannaHide = true;
+            } else {
+                Hide();
+            }
+        }
+
+        protected override void PerformHide(Action onDone = null) {
+            _wannaHide = false;
+            base.PerformHide(onDone);
         }
 
         public override void Clear() {

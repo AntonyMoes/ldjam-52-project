@@ -1,9 +1,10 @@
 {
-    "name": "_Games",
+    "name": "_Game",
     "rootNamespace": "",
     "references": [
         "GUID:cbff09a9ac3d5444095cc7af6e6a5a6a",
-        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:ac9ef3c8d7ce9924e9a995b688a412c5"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

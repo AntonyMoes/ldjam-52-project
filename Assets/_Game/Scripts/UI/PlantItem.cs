@@ -57,7 +57,7 @@ namespace _Game.Scripts.UI {
             if (hovering) {
                 _infoPanel = UIController.Instance.ShowPlantInfoPanel(Plant);
             } else if (_infoPanel != null) {
-                _infoPanel.Hide();
+                _infoPanel.TryHide();
             } else {
                 return;
             }

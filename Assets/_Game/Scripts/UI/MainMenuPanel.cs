@@ -19,5 +19,9 @@ namespace _Game.Scripts.UI {
         private void OnButtonClick() {
             _endLevel?.Invoke();
         }
+
+        public void SetButtons(bool enabled) {
+            _button.Enabled = enabled;
+        }
     }
 }
