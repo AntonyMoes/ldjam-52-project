@@ -3,7 +3,7 @@
     {
       "name": "rose",
       "sprite": "rose",
-      "displayName": "La Rose",
+      "displayName": "Rose",
       "requirements": "111",
       "range" : " ,x, \nx,o,x\n ,x, ",
       "effect": "101"
@@ -11,7 +11,7 @@
     {
       "name": "landysh",
       "sprite": "landish",
-      "displayName": "La Landysh",
+      "displayName": "Lily of the Valley",
       "requirements": "311",
       "range" : "x,x\nx, \no, ",
       "effect": "010"
@@ -19,7 +19,7 @@
     {
       "name": "sunflower",
       "sprite": "sunflower",
-      "displayName": "La Sunflower",
+      "displayName": "Sunflower",
       "requirements": "222",
       "range" : "x,x,x\nx,o,x\nx,x,x",
       "effect": "04-4"
@@ -27,7 +27,7 @@
     {
       "name": "lilly",
       "sprite": "lilly",
-      "displayName": "La Lilly",
+      "displayName": "Lilly",
       "requirements": "022",
       "range" : " , ,x, , \n , , , , \nx, ,o, ,x\n , , , , \n , ,x, , ",
       "effect": "2-1-1"
@@ -35,7 +35,7 @@
     {
       "name": "violet",
       "sprite": "violet",
-      "displayName": "La Violet",
+      "displayName": "Violet",
       "requirements": "131",
       "range" : "x, ,x\n ,o, \nx, ,x",
       "effect": "-202"
@@ -43,7 +43,7 @@
     {
       "name": "tulip",
       "sprite": "tulip",
-      "displayName": "La Tulip",
+      "displayName": "Tulip",
       "requirements": "001",
       "range" : "x, ,x\nx, ,x\nx,o,x",
       "effect": "1-10"
